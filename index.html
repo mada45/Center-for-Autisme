@@ -1,10 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="robots" content="noindex, nofollow">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Center For Autisme</title>
+    <link rel="stylesheet" href="style-main.css" type="text/css" media="all">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
-<body>
-           <p>Adam Push</p>
+<body class="site-container">
+    <header class="header-container">
+        <img src="resources/logo.png" id="logo-img" alt="logo of Center for Autisme">
+        <section class="search-and-language-section flex">
+            <div class="search-bar-div flex">
+                <img src="resources/search.svg" class="icons" alt="search bar icon">
+                <input id="search-field" autocomplete="off" placeholder="Search here.." type="text">
+            </div>
+            <div class="language-btn-div flex">
+                <img src="resources/dk.png" class="icons" alt="danish language icon">
+                <img src="resources/eng.png" class="icons" alt="english language icon">
+            </div>
+        </section>
+        <nav>
+            <img src="resources/menu.svg" class="icons" alt="menu icon">
+        </nav>
+    </header>
+
+
+    <main class="main-container">
+        <!-- Slider section -->
+        <section class="slideshow-container">
+            <div class="slideshow-item">
+                <img src="resources/day-activity.jpg" class="slideshow-img" alt="day activity photo">
+                <div class="slideshow-txt">
+                    <h1>Day Activity Offer</h1>
+                    <a class="read-more-btn">Read more</a>
+                </div>
+            </div>
+            <div class="slideshow-item">
+                <img src="resources/women-offer.jpg" class="slideshow-img" alt="photo of a women">
+                <div class="slideshow-txt">
+                    <h1>Special Help For Women</h1>
+                    <a class="read-more-btn">Read more</a>
+                </div>
+            </div>
+            <div class="slideshow-item">
+                <img src="resources/group-activity.jpg" class="slideshow-img" alt="group activity photo">
+                <div class="slideshow-txt">
+                    <h1>Group Network Activity</h1>
+                    <a class="read-more-btn">Read more</a>
+                </div>
+            </div>
+            <div class="center container section large text-white display-bottom-middle">
+                <div class="left arrow" onclick="plusDivs(-1)">&#10094;</div>
+                <span class="badge demo border transparent hover-white" onclick="currentDiv(1)"></span>
+                <span class="badge demo border transparent hover-white" onclick="currentDiv(2)"></span>
+                <span class="badge demo border transparent hover-white" onclick="currentDiv(3)"></span>
+                <div class="right arrow" onclick="plusDivs(1)">&#10095;</div>
+            </div>
+        </section>
+        <!-- User section -->
+        <section>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer-container">
+        <div class="twin">
+            <h2 class="footer-title"></h2>
+            <p></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- First try loading jQuery from Google's CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Fall back to a local copy of jQuery if the CDN fails (downloaded from http://jquery.com/)  -->
+    <script>
+        window.jQuery || document.write('<script src="js/jquery-3.3.1.min.js"><\/script>');
+    </script>
+    <!-- now we can write jQuery or JavaScript in our own files -->
+    <script src="js/scripts.js"></script>
 </body>
 </html>
