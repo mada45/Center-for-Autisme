@@ -26,7 +26,6 @@ function showDivs(n) {
     dots[slideIndex-1].className += " white";
 }
 
-
 /*var myIndex = 0;
 carousel();
 
@@ -41,3 +40,13 @@ function carousel() {
     x[myIndex-1].style.display = "block";
     setTimeout(carousel, 2000); // Change image every 2 seconds
 }*/
+
+
+var link = document.getElementById("nav-link");
+for (var i = 0; i < link.length; i++) {
+    link[i].addEventListener("click", function() {
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+    });
+}

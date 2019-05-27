@@ -17,6 +17,13 @@ h1{
     font-size: 3em;
 }
 
+a{
+    cursor: pointer;
+    /*display: contents;
+    text-decoration: none;
+    color: black;*/
+}
+
 ul{
     list-style: none;
     margin: 0;
@@ -27,7 +34,6 @@ img {
     display: block;
     border: 0;
     width:100%;
-    height:100%;
     object-fit:cover;
 }
 
@@ -43,7 +49,7 @@ Extra classes
 }
 
 /*--------------------------------------------------------------
-Container styles
+Main container
 --------------------------------------------------------------*/
 .site-container{
     display: grid;
@@ -53,10 +59,13 @@ Container styles
     font-family: sans-serif;
 }
 
+/*--------------------------------------------------------------
+Header section
+--------------------------------------------------------------*/
 .header-container{
     margin: 0.5em;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
 }
 
@@ -64,26 +73,128 @@ Container styles
     display: none;
 }
 
-nav{
+/*nav{
     grid-column: 3/4;
     display: flex;
     justify-content: flex-end;
+}*/
+
+/*--------------------------------------------------------------
+Navigation
+--------------------------------------------------------------*/
+.nav-bar-section {
+    justify-self: flex-end;
+    margin: 0 0.5em 0 0;
 }
 
-/*--------------------------------------------------------------
-Header section
---------------------------------------------------------------*/
+/*Burger menu - Menu On*/
+#menuon{
+    background: black;
+    color: white;
+    padding: 1em 1.5em 0 0;
+    position: fixed;
+    z-index: 102;
+    opacity: 0;
+}
 
+/*Burger menu - Menu Off*/
+.off{
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.60);
+    z-index: 99;
+}
 
-/*--------------------------------------------------------------
-Nav section
---------------------------------------------------------------*/
+.nav-bar-section span{
+    display: block;
+    width: 1.6em;
+    height: 2px;
+    background: black;
+    margin-bottom: 4px;
+    z-index: 101;
+}
 
+/* Close button (X) for burger menu*/
+#x{
+    padding: 0.2em;
+    font-size: 2em;
+    font-style: normal;
+    position: fixed;
+    top: 1%;
+    right: 4%;
+    z-index: 102;
+    display: none;
+    opacity: 0.9;
+}
+
+/*Navigation bar*/
+nav {
+    background: white;
+    position: fixed;
+    top: 0%;
+    right: 0%;
+    padding: 2em;
+    z-index: 100;
+    display: none;
+}
+
+/*Links in Navbar*/
+nav a{
+    color: black;
+    display: block;
+    padding-bottom: 2em;
+    min-width: 10em;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.6em;
+}
+
+/*to toggle the burger menu*/
+#togglemenu:checked ~ nav{
+    display: block;
+}
+
+/*to get rid of the checkbox*/
+#togglemenu{
+    display: none;
+}
+
+/*gray space to turn off burger menu*/
+#togglemenu:checked ~ #menu-off{
+    display: block;
+}
+
+/* X to turn off burger menu*/
+#togglemenu:checked ~ #x{
+    display: block;
+}
+
+#togglemenu:checked ~ span{
+    display: none;
+}
+
+.dropdown-content{
+    position: absolute;
+    display: none;
+    z-index: 2000;
+    padding: 0;
+    background: #FFFFFF;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content li{
+    display: none;
+
+}
 
 /*--------------------------------------------------------------
 Slideshow section
 --------------------------------------------------------------*/
-.slideshow-container{
+.slideshow-section{
     position: relative;
 }
 
@@ -94,6 +205,12 @@ Slideshow section
 .slideshow-item{
     position: relative;
     height: 450px;
+    background-color: black;
+}
+
+.slideshow-img{
+    height:100%;
+    opacity: 0.7;
 }
 
 .slideshow-txt{
@@ -110,11 +227,14 @@ Slideshow section
 
 .display-bottom-middle {
     position: absolute;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 5px;
     left: 50%;
     bottom: 3%;
     transform: translate(-50%, 0%);
     -ms-transform: translate(-50%, 0%);
+    align-items: center;
 }
 
 .center {
@@ -137,11 +257,10 @@ Slideshow section
     border-radius: 50%;
     height:13px;
     width:13px;
-    margin: 0.2rem;
     padding:0
 }
 
-.transparent, .hover-none:hover, arrow {
+.transparent, .hover-none:hover, #arrow {
     background-color: transparent !important;
 }
 
@@ -151,6 +270,7 @@ Slideshow section
 
 .arrow{
     color: white;
+    align-self: center;
 }
 
 .arrow:hover {
@@ -170,7 +290,7 @@ Slideshow section
 }
 
 .read-more-btn{
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0.70);
     padding: 0.5em 1em 0.5em 1em;
     font-size: 1em;
     border: 2px solid transparent;
@@ -184,7 +304,26 @@ User section
 /*--------------------------------------------------------------
 Media queries
 --------------------------------------------------------------*/
-@media all and (min-width: 768px){
+/* Mobile landscape mode */
+@media all and (max-width: 768px) and (orientation:landscape){
+
+}
+/* Tablet */
+@media all and (min-width: 768px) and (max-device-width: 1024px){
+
+}
+/* Tablet landscape mode */
+@media all and (min-width: 768px) and (max-device-width: 1024px) and (orientation: landscape){
+
+}
+
+/* Desktop */
+@media all and (min-width: 1024px){
+    /* Don't show on desktop */
+    .off, #menuon, #x, .nav-bar-section span{
+        display: none;
+    }
+
     /* Show on desktop */
     .search-and-language-section{
         grid-column: 3/4;
@@ -193,11 +332,92 @@ Media queries
     }
 
     /* Generic styles */
+    .header-container{
+        margin: 0.5em 0.5em 1em 0.5em;
+    }
+
     h1{
         font-size: 6em;
     }
 
-    /* New styling */
+    /* Navigation */
+    .nav-bar-section{
+        grid-column: 1/4;
+        justify-self: center;
+        padding: 0;
+        margin: 3em 0 0 0;
+    }
+
+    nav{
+        display: grid;
+        grid-template-columns: repeat(6, auto);
+        grid-gap: 8em;
+        position: static;
+        background-color: white;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul{
+        margin: 0;
+    }
+
+    nav button{
+        padding: 1.5em 0;
+        margin: 0;
+    }
+
+    nav a{
+        display: inline-block;
+        font-size: 1.2em;
+        padding: 0;
+        min-width: auto;
+    }
+
+    nav a:hover, a:active{
+        color: red;
+    }
+
+    /* Menu drop-down */
+    .dropdown{
+        position: relative;
+        margin: 0;
+    }
+
+    .dropdown:hover > .dropdown-content{
+        display: block;
+        transition: ease-in .35s;
+        -moz-transition: ease-in .35s;
+        -webkit-transition: ease-in .35s;
+    }
+
+    .nav-item:hover > .dropdown-content{
+        display: block;
+        transition: ease-in .35s;
+        -moz-transition: ease-in .35s;
+        -webkit-transition: ease-in .35s;
+    }
+
+    .dropdown-content{
+        margin: 0;
+    }
+
+    #dropdown-2nd-level{
+        left: 100%;
+        top: 0;
+    }
+
+    .dropdown-content li{
+        list-style: none;
+        display: block;
+        padding: 1em;
+    }
+
+    .dropdown-content li a:hover{
+        color: red;
+        text-decoration: underline;
+        text-decoration-color: red;
+    }
 
     #logo-img{
         width: 8em;
@@ -207,21 +427,23 @@ Media queries
 
     .read-more-btn {
         font-size: 1em;
-        padding: 0.3em;
+        padding: 0.5em;
     }
 
     .icons{
-        width: 1.2em;
+        width: 1.5em;
     }
 
     .language-btn-div{
         margin: 0 2em 0 2em;
-		height: 1.2em;
+        height: 1.5em;
+        width: 4em;
+        display: flex;
+        justify-content: space-around;
     }
 	
 	.search-bar-div{
-		margin: 0 0 0 2em;
-		height: 1.2em;
+		height: 1.5em;
 	}
 
     .search-bar-div img{
@@ -237,10 +459,18 @@ Media queries
        display: none;
     }
 
-    .slideshow-container{
-    }
+    /* Slideshow section */
 
     .slideshow-item {
         height: 25em;
+    }
+
+    .arrow{
+        font-size: 1.5em;
+    }
+
+    .badge{
+        height: 15px;
+        width: 15px;
     }
 }

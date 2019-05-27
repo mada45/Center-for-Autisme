@@ -10,7 +10,9 @@
 </head>
 <body class="site-container">
     <header class="header-container">
-        <img src="resources/logo.png" id="logo-img" alt="logo of Center for Autisme">
+        <section class="logo-section">
+            <img src="resources/logo.png" id="logo-img" alt="logo of Center for Autisme">
+        </section>
         <section class="search-and-language-section flex">
             <div class="search-bar-div flex">
                 <img src="resources/search.svg" class="icons" alt="search bar icon">
@@ -21,42 +23,98 @@
                 <img src="resources/eng.png" class="icons" alt="english language icon">
             </div>
         </section>
-        <nav>
-            <img src="resources/menu.svg" class="icons" alt="menu icon">
-        </nav>
-    </header>
+        <!-- Navigation -->
+        <section class="nav-bar-section">
+            <!--Checkbox to toggle the burger menu-->
+            <input id="togglemenu" type="checkbox" />
+            <!--Label for the checkbox to turn ON-->
+            <label id="menuon" for="togglemenu"></label>
+            <!--Label for X in burger menu-->
+            <label id="x" for="togglemenu"><i class="far fa-times-circle fa-1x" aria-hidden="true"></i></label>
+            <!--Label for the checkbox to turn OFF-->
+            <label class="off" id="menu-off" for="togglemenu"></label>
+            <!--Navigation bar-->
+            <nav class="breadcrumb">
+                <!--Links in Navbar-->
+                <section class="dropdown">
+                    <a href="#" class="nav-link">Job&nbsp;&&nbsp;Education</a>
+                    <ul class="dropdown-content">
+                        <li class="nav-item"><a href="contact.html">Employment</a></li>
+                        <li class="nav-item"><a href="contact.html">Youth&nbsp;Education</a></li>
+                    </ul>
+                </section>
+                <section class="dropdown">
+                    <a href="#">Services & Offers</a>
+                    <ul class="dropdown-content">
+                        <li class="nav-item"><a href="contact.html">Counseling</a>
+                            <ul class="dropdown-content" id="dropdown-2nd-level">
+                                <li class="nav-item"><a href="contact.html">Parental&nbsp;Advisory</a></li>
+                                <li class="nav-item"><a href="contact.html">Teaching</a></li>
+                                <li class="nav-item"><a href="contact.html">Courses</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+                <section class="dropdown">
+                    <a href="#">Research & Development</a>
+                    <ul class="dropdown-content">
+                        <li class="nav-item"><a href="contact.html">Venues</a></li>
+                        <li class="nav-item"><a href="contact.html">Photographers</a></li>
+                        <li class="nav-item"><a href="contact.html">Florists</a></li>
+                        <li class="nav-item"><a href="contact.html">Bakers</a></li>
+                        <li class="nav-item"><a href="contact.html">Dresses</a></li>
+                    </ul>
+                </section>
+                <section class="dropdown">
+                    <a href="#">Articles & Advice</a>
+                    <ul class="dropdown-content">
+                        <li class="nav-item"><a href="contact.html">Photographers</a></li>
+                        <li class="nav-item"><a href="contact.html">Florists</a></li>
+                        <li class="nav-item"><a href="contact.html">Bakers</a></li>
+                        <li class="nav-item"><a href="contact.html">Dresses</a></li>
+                    </ul>
+                </section>
+                <a href="contact.html">About us</a>
+                <a href="contact.html">Contact</a>
+            </nav>
 
+            <!--Burger Menu lines-->
+            <span></span>
+            <span></span>
+            <span></span>
+        </section>
+    </header>
 
     <main class="main-container">
         <!-- Slider section -->
-        <section class="slideshow-container">
+        <section class="slideshow-section">
             <div class="slideshow-item">
                 <img src="resources/day-activity.jpg" class="slideshow-img" alt="day activity photo">
                 <div class="slideshow-txt">
                     <h1>Day Activity Offer</h1>
-                    <a class="read-more-btn">Read more</a>
+                    <a class="read-more-btn">Read more&nbsp;&#x2192;</a>
                 </div>
             </div>
             <div class="slideshow-item">
                 <img src="resources/women-offer.jpg" class="slideshow-img" alt="photo of a women">
                 <div class="slideshow-txt">
                     <h1>Special Help For Women</h1>
-                    <a class="read-more-btn">Read more</a>
+                    <a class="read-more-btn">Read more&nbsp;&#x2192;</a>
                 </div>
             </div>
             <div class="slideshow-item">
                 <img src="resources/group-activity.jpg" class="slideshow-img" alt="group activity photo">
                 <div class="slideshow-txt">
                     <h1>Group Network Activity</h1>
-                    <a class="read-more-btn">Read more</a>
+                    <a class="read-more-btn">Read more&nbsp;&#x2192;</a>
                 </div>
             </div>
             <div class="center container section large text-white display-bottom-middle">
-                <div class="left arrow" onclick="plusDivs(-1)">&#10094;</div>
+                <div class="left arrow" onclick="plusDivs(-1)">&#10092;</div>
                 <span class="badge demo border transparent hover-white" onclick="currentDiv(1)"></span>
                 <span class="badge demo border transparent hover-white" onclick="currentDiv(2)"></span>
                 <span class="badge demo border transparent hover-white" onclick="currentDiv(3)"></span>
-                <div class="right arrow" onclick="plusDivs(1)">&#10095;</div>
+                <div class="right arrow" onclick="plusDivs(1)">&#10093;</div>
             </div>
         </section>
         <!-- User section -->
@@ -78,7 +136,7 @@
 
     <!-- Scripts -->
     <!-- First try loading jQuery from Google's CDN -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Fall back to a local copy of jQuery if the CDN fails (downloaded from http://jquery.com/)  -->
     <script>
         window.jQuery || document.write('<script src="js/jquery-3.3.1.min.js"><\/script>');
