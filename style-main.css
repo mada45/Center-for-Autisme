@@ -182,6 +182,66 @@ User section
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
+Contact
+--------------------------------------------------------------*/
+.breadcrumbs-section-mobile a{
+	text-decoration: none;
+	color: black;
+	margin: 0 5px 0 0;
+}
+.breadcrumbs-section-mobile{
+	margin: 1.5em 0 1.5em 0.7em;
+	font-size: 0.7em;
+	display: flex;
+	text-align: center;
+}
+
+.breadcrumbs-arrow{
+	margin: 0 5px 0 0;
+}
+
+.bold-font{
+	font-weight: 600;
+}
+
+.content-title{
+	font-size: 1em;
+}
+
+.content-container{
+	margin-left: 0.5em;
+}
+
+.content-title-second{
+	font-size: 0.8em;
+	font-weight: 600;
+}
+
+.content-text{
+	font-size: 0.7em;
+}
+
+.bottom-margin{
+	margin-bottom: 1.5em;
+}
+#map-container{
+	display: flex;
+	justify-content: center;
+}
+#contact-map{
+	width: 19em;
+	height: auto;
+}
+
+footer{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	margin: 0 0.7em;
+	border-top: 1px solid black;
+	font-size: 0.7em;
+}
+
+/*--------------------------------------------------------------
 Media queries
 --------------------------------------------------------------*/
 @media all and (min-width: 768px){
