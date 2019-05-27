@@ -104,7 +104,8 @@ Slideshow section
 }
 
 .slideshow-txt h1{
-    margin-bottom: 1em;
+    margin-bottom: 0.3em;
+	margin-top: 0.3em;
 }
 
 .display-bottom-middle {
@@ -149,7 +150,7 @@ Slideshow section
 }
 
 .arrow{
-    color: red;
+    color: white;
 }
 
 .arrow:hover {
@@ -199,28 +200,37 @@ Media queries
     /* New styling */
 
     #logo-img{
-        width: 15em;
+        width: 8em;
+		height: auto;
+		margin-left: 1.5em;
     }
 
     .read-more-btn {
-        font-size: 1.5em;
-        padding: 0.5em;
+        font-size: 1em;
+        padding: 0.3em;
     }
 
     .icons{
-        width: 3em;
+        width: 1.2em;
     }
 
-    .search-bar-div, .language-btn-div{
+    .language-btn-div{
         margin: 0 2em 0 2em;
+		height: 1.2em;
     }
+	
+	.search-bar-div{
+		margin: 0 0 0 2em;
+		height: 1.2em;
+	}
 
     .search-bar-div img{
-        margin-right: 1em;
+        margin-right: 0.3em;
     }
 
     #search-field{
-        font-size: 1em;
+        font-size: 0.7em;
+		margin: 0;
     }
 
     nav .icons{
@@ -228,10 +238,9 @@ Media queries
     }
 
     .slideshow-container{
-        margin-top: 2em;
     }
 
     .slideshow-item {
-        height: 650px;
+        height: 25em;
     }
 }
