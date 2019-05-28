@@ -69,6 +69,10 @@ Header section
     align-items: center;
 }
 
+#logo-img{
+    width: 8em;
+}
+
 .search-and-language-section{
     display: none;
 }
@@ -137,7 +141,7 @@ nav {
     position: fixed;
     top: 0%;
     right: 0%;
-    padding: 2em;
+    padding: 3em;
     z-index: 100;
     display: none;
 }
@@ -196,6 +200,7 @@ Slideshow section
 --------------------------------------------------------------*/
 .slideshow-section{
     position: relative;
+    margin: 1em 0 1em 0;
 }
 
 .slideshow-item{
@@ -221,8 +226,7 @@ Slideshow section
 }
 
 .slideshow-txt h1{
-    margin-bottom: 0.3em;
-	margin-top: 0.3em;
+    margin-bottom: 0.5em;
 }
 
 .display-bottom-middle {
@@ -290,7 +294,7 @@ Slideshow section
 }
 
 .read-more-btn{
-    background-color: rgba(255, 0, 0, 0.70);
+    background-color: rgba(206, 32, 32, 0.8);
     padding: 0.5em 1em 0.5em 1em;
     font-size: 1em;
     border: 2px solid transparent;
@@ -300,6 +304,45 @@ Slideshow section
 /*--------------------------------------------------------------
 User section
 --------------------------------------------------------------*/
+.user-section ul{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+    margin: 2em 0 2em 0;
+}
+
+.user-choice{
+    position: relative;
+    margin: 1em;
+    background-color: black;
+}
+
+.user-choice img{
+    opacity: 0.8;
+}
+
+.user-choice-title{
+    position: absolute;
+    bottom: 0;
+    background-color: #00000070;
+    color: white;
+    width: 100%;
+    padding: 10px;
+}
+
+#one{
+    background-color: white;
+    color: black;
+    border: 1px solid rgba(0, 0, 0, 0.70);
+}
+
+#img-one{
+    border: 1px solid rgba(0, 0, 0, 0.70);
+}
+
+#three{
+    background-color: rgba(206, 32, 32, 0.5);
+}
 
 /*--------------------------------------------------------------
 Contact
@@ -355,12 +398,30 @@ Contact
 
 footer{
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	margin: 0 0.7em;
+	grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+    padding: 4em 1em 4em 1em;
 	border-top: 1px solid black;
 	font-size: 0.7em;
 }
 
+footer h4{
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.footer-section{
+    align-self: center;
+    justify-self: center;
+}
+
+#footer-map{
+    display: none;
+}
+
+#credentials-png{
+    width: 10em;
+}
 /*--------------------------------------------------------------
 Media queries
 --------------------------------------------------------------*/
@@ -385,6 +446,10 @@ Media queries
     }
 
     /* Show on desktop */
+    #footer-map{
+        display: block;
+    }
+
     .search-and-language-section{
         grid-column: 3/4;
         display: flex;
@@ -393,7 +458,7 @@ Media queries
 
     /* Generic styles */
     .header-container{
-        margin: 0.5em 0.5em 1em 0.5em;
+        margin: 1em 0.5em 1em 0.5em;
     }
 
     h1{
@@ -458,6 +523,11 @@ Media queries
         -webkit-transition: ease-in .35s;
     }
 
+    .nav-link:active{
+        background-color: white;
+        color: red;
+    }
+
     .dropdown-content{
         margin: 0;
     }
@@ -480,7 +550,7 @@ Media queries
     }
 
     #logo-img{
-        width: 8em;
+        width: 10em;
 		height: auto;
 		margin-left: 1.5em;
     }
@@ -491,28 +561,29 @@ Media queries
     }
 
     .icons{
-        width: 1.5em;
+        width: 2em;
     }
 
     .language-btn-div{
-        margin: 0 2em 0 2em;
-        height: 1.5em;
-        width: 4em;
+        margin: 0 1.5em 0 1.5em;
+        height: 2em;
+        width: 5em;
         display: flex;
         justify-content: space-around;
     }
 	
 	.search-bar-div{
-		height: 1.5em;
+		height: 2em;
 	}
 
     .search-bar-div img{
-        margin-right: 0.3em;
+        margin-right: 0.5em;
     }
 
     #search-field{
         font-size: 0.7em;
 		margin: 0;
+        width: 15em;
     }
 
     nav .icons{
@@ -520,17 +591,57 @@ Media queries
     }
 
     /* Slideshow section */
+    .slideshow-section{
+        margin: 0;
+    }
 
     .slideshow-item {
-        height: 25em;
+        height: 40em;
+        margin: 0;
     }
 
     .arrow{
-        font-size: 1.5em;
+        font-size: 2em;
     }
 
     .badge{
         height: 15px;
         width: 15px;
+    }
+
+    .display-bottom-middle {
+        grid-gap: 12px;
+    }
+
+    /* User section */
+    .user-section ul {
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 0 0 2em 0;
+    }
+
+    .user-choice{
+        margin: 5em 2em 5em 2em;
+    }
+
+    /* Footer */
+    footer{
+        grid-template-columns: 1fr repeat(3, 2fr) 1fr;
+    }
+
+    .footer-container{
+        padding: 8em 1em 8em 1em;
+    }
+
+    .footer-section img{
+        width: 8em;
+    }
+
+    footer h4{
+        font-size: 1.5em;
+    }
+
+    #credentials-png {
+        width: 22em;
     }
 }

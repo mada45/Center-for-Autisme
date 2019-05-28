@@ -26,7 +26,8 @@ function showDivs(n) {
     dots[slideIndex-1].className += " white";
 }
 
-/*var myIndex = 0;
+/* Slideshow automation */
+var myIndex = 0;
 carousel();
 
 function carousel() {
@@ -38,10 +39,11 @@ function carousel() {
     myIndex++;
     if (myIndex > x.length) {myIndex = 1}
     x[myIndex-1].style.display = "block";
-    setTimeout(carousel, 2000); // Change image every 2 seconds
-}*/
+    setTimeout(carousel, 3000); // Change image every 3 seconds
+}
 
-
+/* Nav link active */
+/*
 var link = document.getElementById("nav-link");
 for (var i = 0; i < link.length; i++) {
     link[i].addEventListener("click", function() {
@@ -49,4 +51,4 @@ for (var i = 0; i < link.length; i++) {
         current[0].className = current[0].className.replace(" active", "");
         this.className += " active";
     });
-}
+}*/

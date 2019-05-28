@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<<<<<<< HEAD
-    <meta charset="UTF-8">
-    <title>Contact</title>
-</head>
-<body>
-
-</body>
-</html>
-=======
     <meta name="robots" content="noindex, nofollow">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,23 +10,82 @@
 </head>
 
 <body class="site-container">
-	
-	<header class="header-container">
-        <img src="resources/logo.png" id="logo-img" alt="logo of Center for Autisme">
-        <section class="search-and-language-section flex">
-            <div class="search-bar-div flex">
-                <img src="resources/search.svg" class="icons" alt="search bar icon">
-                <input id="search-field" autocomplete="off" placeholder="Search here.." type="text">
-            </div>
-            <div class="language-btn-div flex">
-                <img src="resources/dk.png" class="icons" alt="danish language icon">
-                <img src="resources/eng.png" class="icons" alt="english language icon">
-            </div>
-        </section>
-        <nav>
-            <img src="resources/menu.svg" class="icons" alt="menu icon">
-        </nav>
-    </header>
+
+<header class="header-container">
+	<section class="logo-section">
+		<img src="resources/logo.png" id="logo-img" alt="logo of Center for Autisme">
+	</section>
+	<section class="search-and-language-section flex">
+		<div class="search-bar-div flex">
+			<img src="resources/search.svg" class="icons" alt="search bar icon">
+			<input id="search-field" autocomplete="off" placeholder="Search here.." type="text">
+		</div>
+		<div class="language-btn-div flex">
+			<img src="resources/dk.png" class="icons" alt="danish language icon">
+			<img src="resources/eng.png" class="icons" alt="english language icon">
+		</div>
+	</section>
+	<!-- Navigation -->
+	<section class="nav-bar-section">
+		<!--Checkbox to toggle the burger menu-->
+		<input id="togglemenu" type="checkbox" />
+		<!--Label for the checkbox to turn ON-->
+		<label id="menuon" for="togglemenu"></label>
+		<!--Label for X in burger menu-->
+		<label id="x" for="togglemenu"><i class="far fa-times-circle fa-1x" aria-hidden="true"></i></label>
+		<!--Label for the checkbox to turn OFF-->
+		<label class="off" id="menu-off" for="togglemenu"></label>
+		<!--Navigation bar-->
+		<nav class="breadcrumb">
+			<!--Links in Navbar-->
+			<section class="dropdown">
+				<a href="index.html" class="nav-link">Job&nbsp;&&nbsp;Education</a>
+				<ul class="dropdown-content">
+					<li class="nav-item"><a href="contact.html">Employment</a></li>
+					<li class="nav-item"><a href="contact.html">Youth&nbsp;Education</a></li>
+				</ul>
+			</section>
+			<section class="dropdown">
+				<a href="#">Services & Offers</a>
+				<ul class="dropdown-content">
+					<li class="nav-item"><a href="contact.html">Counseling</a>
+						<ul class="dropdown-content" id="dropdown-2nd-level">
+							<li class="nav-item"><a href="contact.html">Parental&nbsp;Advisory</a></li>
+							<li class="nav-item"><a href="contact.html">Teaching</a></li>
+							<li class="nav-item"><a href="contact.html">Courses</a></li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section class="dropdown">
+				<a href="#">Research & Development</a>
+				<ul class="dropdown-content">
+					<li class="nav-item"><a href="contact.html">Venues</a></li>
+					<li class="nav-item"><a href="contact.html">Photographers</a></li>
+					<li class="nav-item"><a href="contact.html">Florists</a></li>
+					<li class="nav-item"><a href="contact.html">Bakers</a></li>
+					<li class="nav-item"><a href="contact.html">Dresses</a></li>
+				</ul>
+			</section>
+			<section class="dropdown">
+				<a href="#">Articles & Advice</a>
+				<ul class="dropdown-content">
+					<li class="nav-item"><a href="contact.html">Photographers</a></li>
+					<li class="nav-item"><a href="contact.html">Florists</a></li>
+					<li class="nav-item"><a href="contact.html">Bakers</a></li>
+					<li class="nav-item"><a href="contact.html">Dresses</a></li>
+				</ul>
+			</section>
+			<a href="contact.html">About us</a>
+			<a href="contact.html">Contact</a>
+		</nav>
+
+		<!--Burger Menu lines-->
+		<span></span>
+		<span></span>
+		<span></span>
+	</section>
+</header>
 	
 	<main class="main-container">
 		
@@ -87,20 +137,9 @@
 	</main>
 	
 	<footer class="footer-container">
-			
-			<article>
-			</article>
-			
-			<article>
-				<p>Herlev Hovedgade 199, 2730 Herlev<br>
-				Phone: +45 44 98 23 55<br>
-				Fax: +45 44 98 23 53<br>
-				info@centerforautisme.dk</p>
-			</article>
-			
-			<article>
-			</article>
-			
+		<article>
+			<p>Herlev Hovedgade 199, 2730 Herlev<br>Phone: +45 44 98 23 55<br>Fax: +45 44 98 23 53<br>info@centerforautisme.dk</p>
+		</article>
     </footer>
 
     <!-- Scripts -->
@@ -115,4 +154,4 @@
 	
 </body>
 </html>
->>>>>>> 27a627105d0aa623a668cece2386208d216fa7f9
+

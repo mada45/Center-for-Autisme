@@ -16,7 +16,7 @@
         <section class="search-and-language-section flex">
             <div class="search-bar-div flex">
                 <img src="resources/search.svg" class="icons" alt="search bar icon">
-                <input id="search-field" autocomplete="off" placeholder="Search here.." type="text">
+                <input id="search-field" autocomplete="off" type="text">
             </div>
             <div class="language-btn-div flex">
                 <img src="resources/dk.png" class="icons" alt="danish language icon">
@@ -37,7 +37,7 @@
             <nav class="breadcrumb">
                 <!--Links in Navbar-->
                 <section class="dropdown">
-                    <a href="#" class="nav-link">Job&nbsp;&&nbsp;Education</a>
+                    <a href="index.html" class="nav-link">Job&nbsp;&&nbsp;Education</a>
                     <ul class="dropdown-content">
                         <li class="nav-item"><a href="contact.html">Employment</a></li>
                         <li class="nav-item"><a href="contact.html">Youth&nbsp;Education</a></li>
@@ -58,20 +58,20 @@
                 <section class="dropdown">
                     <a href="#">Research & Development</a>
                     <ul class="dropdown-content">
-                        <li class="nav-item"><a href="contact.html">Venues</a></li>
-                        <li class="nav-item"><a href="contact.html">Photographers</a></li>
-                        <li class="nav-item"><a href="contact.html">Florists</a></li>
-                        <li class="nav-item"><a href="contact.html">Bakers</a></li>
-                        <li class="nav-item"><a href="contact.html">Dresses</a></li>
+                        <li class="nav-item"><a href="contact.html">...</a></li>
+                        <li class="nav-item"><a href="contact.html">...</a></li>
+                        <li class="nav-item"><a href="contact.html">...</a></li>
+                        <li class="nav-item"><a href="contact.html">...</a></li>
+                        <li class="nav-item"><a href="contact.html">...</a></li>
                     </ul>
                 </section>
                 <section class="dropdown">
                     <a href="#">Articles & Advice</a>
                     <ul class="dropdown-content">
-                        <li class="nav-item"><a href="contact.html">Photographers</a></li>
-                        <li class="nav-item"><a href="contact.html">Florists</a></li>
-                        <li class="nav-item"><a href="contact.html">Bakers</a></li>
-                        <li class="nav-item"><a href="contact.html">Dresses</a></li>
+                        <li class="nav-item"><a href="contact.html">...</a></li>
+                        <li class="nav-item"><a href="contact.html">...</a></li>
+                        <li class="nav-item"><a href="contact.html">...</a></li>
+                        <li class="nav-item"><a href="contact.html">...</a></li>
                     </ul>
                 </section>
                 <a href="contact.html">About us</a>
@@ -110,28 +110,60 @@
                 </div>
             </div>
             <div class="center container section large text-white display-bottom-middle">
-                <div class="left arrow" onclick="plusDivs(-1)">&#10092;</div>
+                <!--<div class="left arrow" onclick="plusDivs(-1)">&#10092;</div>-->
                 <span class="badge demo border transparent hover-white" onclick="currentDiv(1)"></span>
                 <span class="badge demo border transparent hover-white" onclick="currentDiv(2)"></span>
                 <span class="badge demo border transparent hover-white" onclick="currentDiv(3)"></span>
-                <div class="right arrow" onclick="plusDivs(1)">&#10093;</div>
+                <!--<div class="right arrow" onclick="plusDivs(1)">&#10093;</div>-->
             </div>
         </section>
         <!-- User section -->
-        <section>
+        <section class="user-section">
             <ul>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li class="user-choice">
+                    <a href="index.html">
+                        <img id="img-one" src="resources/autist.jpg" alt="person with autism">
+                        <div class="user-choice-title" id="one">
+                            <h2>Person&nbsp;with&nbsp;autism&nbsp;&#x2192;</h2>
+                        </div>
+                    </a>
+                </li>
+                <li class="user-choice">
+                    <a href="index.html">
+                        <img src="resources/parent.jpg" alt="parent of person with autism">
+                        <div class="user-choice-title">
+                            <h2>Parent&nbsp;&#x2192;</h2>
+                        </div>
+                    </a>
+                </li>
+                <li class="user-choice">
+                    <a href="index.html">
+                        <img src="resources/social-worker.jpg" alt="social worker">
+                        <div class="user-choice-title" id="three">
+                            <h2>Educator&nbsp;&#x2192;</h2>
+                        </div>
+                    </a>
+                </li>
             </ul>
         </section>
     </main>
 
     <footer class="footer-container">
-        <div class="twin">
-            <h2 class="footer-title"></h2>
-            <p></p>
-        </div>
+        <section class="footer-section">
+            <img src="resources/footer-left.png" alt="">
+        </section>
+        <section class="footer-section">
+            <h4>Herlev Hovedgade 199, 2730 Herlev<br>Phone: +45 44 98 23 55<br>Fax: +45 44 98 23 53<br>info@centerforautisme.dk</h4>
+        </section>
+        <section class="footer-section" id="footer-map">
+            <iframe src="https://www.google.com/maps/embed?pb=" width="300" height="150" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </section>
+        <section class="footer-section">
+            <img id="credentials-png" src="resources/credentials.png">
+        </section>
+        <section class="footer-section">
+            <img src="resources/footer-right.png" alt="">
+        </section>
     </footer>
 
     <!-- Scripts -->
