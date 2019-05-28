@@ -5,7 +5,14 @@
 }
 
 /*--------------------------------------------------------------
-Generic styles
+----------------------------------------------------------------
+----------------------- Landing page ---------------------------
+----------------------------------------------------------------
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+                           Generic styles
 --------------------------------------------------------------*/
 h1, h2, h3, h4, h5, h6 {
     clear: both;
@@ -38,7 +45,7 @@ img {
 }
 
 /*--------------------------------------------------------------
-Extra classes
+                        Extra classes
 --------------------------------------------------------------*/
 .flex{
     display: flex;
@@ -49,7 +56,7 @@ Extra classes
 }
 
 /*--------------------------------------------------------------
-Main container
+                        Main container
 --------------------------------------------------------------*/
 .site-container{
     display: grid;
@@ -60,7 +67,7 @@ Main container
 }
 
 /*--------------------------------------------------------------
-Header section
+                        Header section
 --------------------------------------------------------------*/
 .header-container{
     margin: 0.5em;
@@ -77,14 +84,8 @@ Header section
     display: none;
 }
 
-/*nav{
-    grid-column: 3/4;
-    display: flex;
-    justify-content: flex-end;
-}*/
-
 /*--------------------------------------------------------------
-Navigation
+                          Navigation
 --------------------------------------------------------------*/
 .nav-bar-section {
     justify-self: flex-end;
@@ -196,7 +197,7 @@ nav a{
 }
 
 /*--------------------------------------------------------------
-Slideshow section
+                        Slideshow section
 --------------------------------------------------------------*/
 .slideshow-section{
     position: relative;
@@ -232,7 +233,7 @@ Slideshow section
 .display-bottom-middle {
     position: absolute;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 5px;
     left: 50%;
     bottom: 3%;
@@ -302,7 +303,7 @@ Slideshow section
 }
 
 /*--------------------------------------------------------------
-User section
+                          User section
 --------------------------------------------------------------*/
 .user-section ul{
     display: grid;
@@ -345,69 +346,15 @@ User section
 }
 
 /*--------------------------------------------------------------
-Contact
+                        Footer section
 --------------------------------------------------------------*/
-.breadcrumbs-section-mobile a{
-	text-decoration: none;
-	color: black;
-	margin: 0 5px 0 0;
-}
-.breadcrumbs-section-mobile{
-	margin: 1.5em 0 1.5em 0.7em;
-	font-size: 0.7em;
-	display: flex;
-	text-align: center;
-}
-
-.breadcrumbs-arrow{
-	margin: 0 5px 0 0;
-}
-
-.bold-font{
-	font-weight: 600;
-}
-
-.content-title{
-	font-size: 1em;
-}
-
-.content-container{
-	margin-left: 0.5em;
-}
-
-.content-title-second{
-	font-size: 0.8em;
-	font-weight: 600;
-}
-
-.content-text{
-	font-size: 0.7em;
-}
-
-.bottom-margin{
-	margin-bottom: 1.5em;
-}
-#map-container{
-	display: flex;
-	justify-content: center;
-}
-#contact-map{
-	width: 19em;
-	height: auto;
-}
-
 footer{
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(3, 1fr);
     grid-gap: 5px;
     padding: 4em 1em 4em 1em;
 	border-top: 1px solid black;
 	font-size: 0.7em;
-}
-
-footer h4{
-    font-weight: 300;
-    letter-spacing: 1px;
 }
 
 .footer-section{
@@ -415,48 +362,152 @@ footer h4{
     justify-self: center;
 }
 
-#footer-map{
+footer h4{
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-size: 1.2em;
+}
+
+#footer-map-section, #footer-credentials-section{
     display: none;
 }
 
-#credentials-png{
-    width: 10em;
+#footer-left-logo-section{
+    grid-column: 1/2;
+    align-self: flex-end;
 }
+
+#footer-address-and-SoMe-section{
+    grid-row: 1/2;
+    grid-column: 2/3;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+#footer-social-media-container{
+    display: flex;
+    grid-row: 2/3;
+    grid-column: 2/3;
+    align-self: flex-start;
+    margin: 1em 0 0 0;
+}
+
+#footer-social-media-container img{
+    padding: 6px;
+}
+
+#footer-right-logo-section{
+    grid-column: 3/4;
+    align-self: flex-start;
+}
+
+#footer-left-logo-section img, #footer-right-logo-section img{
+    width: 4.5em;
+}
+
 /*--------------------------------------------------------------
-Media queries
+----------------------------------------------------------------
+----------------------- Contact page ---------------------------
+----------------------------------------------------------------
 --------------------------------------------------------------*/
-/* Mobile landscape mode */
+.breadcrumbs-section-mobile a{
+    text-decoration: none;
+    color: black;
+    margin: 0 5px 0 0;
+}
+.breadcrumbs-section-mobile{
+    margin: 1.5em 0 1.5em 0.7em;
+    font-size: 0.7em;
+    display: flex;
+    text-align: center;
+}
+
+.breadcrumbs-arrow{
+    margin: 0 5px 0 0;
+}
+
+.bold-font{
+    font-weight: 600;
+}
+
+.content-title{
+    font-size: 1em;
+}
+
+.content-container{
+    margin-left: 0.5em;
+}
+
+.content-title-second{
+    font-size: 0.8em;
+    font-weight: 600;
+}
+
+.content-text{
+    font-size: 0.7em;
+}
+
+.bottom-margin{
+    margin-bottom: 1.5em;
+}
+#map-container{
+    display: flex;
+    justify-content: center;
+}
+#contact-map{
+    width: 19em;
+    height: auto;
+}
+
+/*--------------------------------------------------------------
+----------------------------------------------------------------
+----------------------- Media queries --------------------------
+----------------------------------------------------------------
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+                     Mobile landscape mode
+--------------------------------------------------------------*/
 @media all and (max-width: 768px) and (orientation:landscape){
 
 }
-/* Tablet */
+
+/*--------------------------------------------------------------
+                            Tablet
+--------------------------------------------------------------*/
 @media all and (min-width: 768px) and (max-device-width: 1024px){
 
 }
-/* Tablet landscape mode */
+
+/*--------------------------------------------------------------
+                     Tablet landscape mode
+--------------------------------------------------------------*/
 @media all and (min-width: 768px) and (max-device-width: 1024px) and (orientation: landscape){
 
 }
 
-/* Desktop */
+/*--------------------------------------------------------------
+                             Desktop
+--------------------------------------------------------------*/
 @media all and (min-width: 1024px){
-    /* Don't show on desktop */
-    .off, #menuon, #x, .nav-bar-section span{
+    /*-------------------------
+      Don't display on desktop
+    ---------------------------*/
+    .off, #menuon, #x, .nav-bar-section span, nav .icons{
         display: none;
     }
 
-    /* Show on desktop */
-    #footer-map{
+    /*-------------------
+      Display on desktop
+    ---------------------*/
+    #footer-map-section, #footer-credentials-section{
         display: block;
     }
 
-    .search-and-language-section{
-        grid-column: 3/4;
-        display: flex;
-        justify-content: flex-end;
-    }
-
-    /* Generic styles */
+    /*----------------
+      Generic styles
+    -----------------*/
     .header-container{
         margin: 1em 0.5em 1em 0.5em;
     }
@@ -465,7 +516,47 @@ Media queries
         font-size: 6em;
     }
 
-    /* Navigation */
+    /*----------------
+        Navigation
+    -----------------*/
+    #logo-img{
+        width: 10em;
+        height: auto;
+        margin-left: 1.5em;
+    }
+
+    .search-and-language-section{
+        grid-column: 3/4;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .icons{
+        width: 2em;
+    }
+
+    .search-bar-div{
+        height: 2em;
+    }
+
+    .search-bar-div img{
+        margin-right: 0.5em;
+    }
+
+    #search-field{
+        font-size: 0.7em;
+        margin: 0;
+        width: 15em;
+    }
+
+    .language-btn-div{
+        margin: 0 1.5em 0 1.5em;
+        height: 2em;
+        width: 5em;
+        display: flex;
+        justify-content: space-around;
+    }
+
     .nav-bar-section{
         grid-column: 1/4;
         justify-self: center;
@@ -503,7 +594,6 @@ Media queries
         color: red;
     }
 
-    /* Menu drop-down */
     .dropdown{
         position: relative;
         margin: 0;
@@ -549,48 +639,9 @@ Media queries
         text-decoration-color: red;
     }
 
-    #logo-img{
-        width: 10em;
-		height: auto;
-		margin-left: 1.5em;
-    }
-
-    .read-more-btn {
-        font-size: 1em;
-        padding: 0.5em;
-    }
-
-    .icons{
-        width: 2em;
-    }
-
-    .language-btn-div{
-        margin: 0 1.5em 0 1.5em;
-        height: 2em;
-        width: 5em;
-        display: flex;
-        justify-content: space-around;
-    }
-	
-	.search-bar-div{
-		height: 2em;
-	}
-
-    .search-bar-div img{
-        margin-right: 0.5em;
-    }
-
-    #search-field{
-        font-size: 0.7em;
-		margin: 0;
-        width: 15em;
-    }
-
-    nav .icons{
-       display: none;
-    }
-
-    /* Slideshow section */
+    /*--------------------------------------------------------------
+                            Slideshow section
+    --------------------------------------------------------------*/
     .slideshow-section{
         margin: 0;
     }
@@ -613,7 +664,14 @@ Media queries
         grid-gap: 12px;
     }
 
-    /* User section */
+    .read-more-btn {
+        font-size: 1.2em;
+        padding: 0.5em;
+    }
+
+    /*--------------------------------------------------------------
+                              User section
+    --------------------------------------------------------------*/
     .user-section ul {
         grid-template-rows: 1fr;
         grid-template-columns: repeat(3, 1fr);
@@ -624,7 +682,9 @@ Media queries
         margin: 5em 2em 5em 2em;
     }
 
-    /* Footer */
+    /*--------------------------------------------------------------
+                            Footer section
+    --------------------------------------------------------------*/
     footer{
         grid-template-columns: 1fr repeat(3, 2fr) 1fr;
     }
@@ -633,15 +693,45 @@ Media queries
         padding: 8em 1em 8em 1em;
     }
 
-    .footer-section img{
-        width: 8em;
-    }
-
     footer h4{
         font-size: 1.5em;
     }
 
+    #footer-left-logo-section {
+        grid-column: 1/2;
+        align-self: center;
+    }
+
+    #footer-social-media-container{
+        grid-row: 1/2;
+        align-self: flex-end;
+    }
+
+    #footer-social-media-container img {
+        padding: 7px;
+        width: 5em;
+    }
+
+    #footer-map-section iframe{
+        height: 200px;
+        width: 350px;
+    }
+
+    #footer-credentials-section{
+        grid-row: 1/2;
+        grid-column: 4/5;
+    }
+
     #credentials-png {
-        width: 22em;
+        width: 30em;
+    }
+
+    #footer-right-logo-section{
+        grid-column: 5/6;
+        align-self: center;
+    }
+
+    #footer-left-logo-section img, #footer-right-logo-section img{
+        width: 10em;
     }
 }
