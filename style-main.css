@@ -547,6 +547,7 @@ footer h4{
         padding: 0;
     }
 
+
     /*--------------------------------------------------------------
                             Slideshow section
     --------------------------------------------------------------*/
@@ -613,6 +614,10 @@ footer h4{
 
     .user-choice{
         margin: 5em 2em 5em 2em;
+    }
+
+    .user-choice h4{
+        font-size: 1.2em;
     }
 
     .user-choice a:hover .user-choice-title{
