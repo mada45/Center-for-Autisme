@@ -1,4 +1,21 @@
-/* Homepage slideshow */
+$(() => {
+    // ** Variables ** //
+    const $dropdownToogle = $('.dropdown-toggle');
+
+/*--------------------------------------------------------------
+                        Navigation
+--------------------------------------------------------------*/
+
+$dropdownToogle.on("mouseenter", function () {
+    $(this).dropdown('show')
+});
+
+$dropdownToogle.on("mouseleave", function () {
+    $(this).dropdown('hide')
+});
+/*--------------------------------------------------------------
+                        Homepage slideshow
+--------------------------------------------------------------*/
 var slideIndex = 1;
 showDivs(slideIndex);
 
@@ -26,7 +43,9 @@ function showDivs(n) {
     dots[slideIndex-1].className += " white";
 }
 
-/* Slideshow automation */
+/*--------------------------------------------------------------
+                        Slideshow automation
+--------------------------------------------------------------*/
 var myIndex = 0;
 carousel();
 
@@ -52,3 +71,5 @@ for (var i = 0; i < link.length; i++) {
         this.className += " active";
     });
 }*/
+
+});

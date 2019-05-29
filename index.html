@@ -5,7 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Center For Autisme</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Css file -->
     <link rel="stylesheet" href="style-main.css" type="text/css" media="all">
+    <!-- Icon source -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
 <body class="site-container">
@@ -18,7 +22,7 @@
         <!-- Search and language options -->
         <section class="search-and-language-section flex">
             <div class="search-bar-div flex">
-                <img src="resources/search.svg" class="icons" alt="search bar icon">
+                <label for="search-field"><img src="resources/search.svg" class="icons" alt="search bar icon"></label>
                 <input id="search-field" autocomplete="off" type="text">
             </div>
             <div class="language-btn-div flex">
@@ -36,55 +40,56 @@
             <label id="x" for="togglemenu"><i class="far fa-times-circle fa-1x" aria-hidden="true"></i></label>
             <!--Label for the checkbox to turn OFF-->
             <label class="off" id="menu-off" for="togglemenu"></label>
+
             <!--Navigation bar-->
-            <nav class="breadcrumb">
-                <!--Links in Navbar-->
-                <section class="dropdown">
-                    <a href="index.html" class="nav-link">Job&nbsp;&&nbsp;Education</a>
-                    <ul class="dropdown-content">
-                        <li class="nav-item"><a href="html/contact.html">Employment</a></li>
-                        <li class="nav-item"><a href="html/contact.html">Youth&nbsp;Education</a></li>
-                    </ul>
-                </section>
-                <section class="dropdown">
-                    <a href="#">Services & Offers</a>
-                    <ul class="dropdown-content">
-                        <li class="nav-item"><a href="html/contact.html">Counseling</a>
-                            <ul class="dropdown-content" id="dropdown-2nd-level">
-                                <li class="nav-item"><a href="html/contact.html">Parental&nbsp;Advisory</a></li>
-                                <li class="nav-item"><a href="html/contact.html">Teaching</a></li>
-                                <li class="nav-item"><a href="html/contact.html">Courses</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </section>
-                <section class="dropdown">
-                    <a href="#">Research & Development</a>
-                    <ul class="dropdown-content">
-                        <li class="nav-item"><a href="html/contact.html">...</a></li>
-                        <li class="nav-item"><a href="html/contact.html">...</a></li>
-                        <li class="nav-item"><a href="html/contact.html">...</a></li>
-                        <li class="nav-item"><a href="html/contact.html">...</a></li>
-                        <li class="nav-item"><a href="html/contact.html">...</a></li>
-                    </ul>
-                </section>
-                <section class="dropdown">
-                    <a href="#">Articles & Advice</a>
-                    <ul class="dropdown-content">
-                        <li class="nav-item"><a href="html/contact.html">...</a></li>
-                        <li class="nav-item"><a href="html/contact.html">...</a></li>
-                        <li class="nav-item"><a href="html/contact.html">...</a></li>
-                        <li class="nav-item"><a href="html/contact.html">...</a></li>
-                    </ul>
-                </section>
-                <a href="html/contact.html">About us</a>
-                <a href="html/contact.html">Contact</a>
+            <nav class="nav nav-fill collapse navbar-collapse">
+                <ul class="dropdown">
+                    <li class="nav-item dropdown-toggle"><a href="#" class="nav-link" id="job-and-education-btn" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Job&nbsp;&&nbsp;Education</a></li>
+                    <li class="nav-item dropdown-menu" aria-labelledby="job-and-education-btn">
+                        <a class="nav-link dropdown-item" href="html/contact.html">Employment</a>
+                        <a class="nav-link dropdown-item" href="html/contact.html">Youth&nbsp;Education</a>
+                    </li>
+                </ul>
+                <ul class="dropdown">
+                    <li class="nav-item dropdown-toggle"><a href="#" class="nav-link" id="services-and-offers-btn" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Services&nbsp;&#x26;&nbsp;Offers</a></li>
+                    <li class="nav-item dropdown-menu" aria-labelledby="services-and-offers-btn">
+                        <ul class="dropdown">
+                            <li class="nav-item dropdown-toggle"><a class="nav-link dropdown-item dropdown-toggle" a href="#" id="counseling-btn" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Counseling</a></li>
+                            <li class="nav-item dropdown-menu" aria-labelledby="counseling-btn">
+                                <a class="nav-link dropdown-item" href="html/contact.html">Parental&nbsp;Advisory</a>
+                                <a class="nav-link dropdown-item" href="html/contact.html">Teaching</a>
+                                <a class="nav-link dropdown-item" href="html/contact.html">Courses</a>
+                            </li>
+                        </ul>
+                        <a class="nav-link dropdown-item" href="html/contact.html">blah blah</a>
+                    </li>
+                </ul>
+                <ul class="dropdown">
+                    <li class="nav-item dropdown-toggle"><a href="#" class="nav-link" id="research-and-development-btn" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Research&nbsp;&#x26;&nbsp;Development</a></li>
+                    <li class="nav-item dropdown-menu" aria-labelledby="research-and-development-btn">
+                        <a class="nav-link dropdown-item" href="html/contact.html">blah blah</a>
+                        <a class="nav-link dropdown-item" href="html/contact.html">blah blah</a>
+                        <a class="nav-link dropdown-item" href="html/contact.html">blah blah</a>
+                    </li>
+                </ul>
+                <ul class="dropdown">
+                    <li class="nav-item dropdown-toggle"><a href="#" class="nav-link" id="articles-and-advice-btn" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles&nbsp;&#x26;&nbsp;Advice</a></li>
+                    <li class="nav-item dropdown-menu" aria-labelledby="articles-and-advice-btn">
+                        <a class="nav-link dropdown-item" href="html/contact.html">blah blah</a>
+                        <a class="nav-link dropdown-item" href="html/contact.html">blah blah</a>
+                        <a class="nav-link dropdown-item" href="html/contact.html">blah blah</a>
+                    </li>
+                </ul>
+                <a class="nav-item nav-link" id="about-us-btn" href="index.html" role="button">About us</a>
+                <a class="nav-item nav-link" id="contact-btn" href="html/contact.html" role="button">Contact</a>
             </nav>
 
             <!--Burger Menu lines-->
-            <span></span>
-            <span></span>
-            <span></span>
+            <div class="burger-lines">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </section>
     </header>
     <!-- Main section -->
@@ -95,26 +100,26 @@
             <div class="slideshow-item">
                 <img src="resources/day-activity.jpg" class="slideshow-img" alt="day activity photo">
                 <div class="slideshow-txt">
-                    <h1>Day Activity Offer</h1>
-                    <a class="read-more-btn">Read more&nbsp;&#x2192;</a>
+                    <h1>Day Activities For Everyone</h1>
+                    <a class="read-more-btn">Read more&nbsp;</a>
                 </div>
             </div>
             <div class="slideshow-item">
                 <img src="resources/women-offer.jpg" class="slideshow-img" alt="photo of a women">
                 <div class="slideshow-txt">
-                    <h1>Special Help For Women</h1>
-                    <a class="read-more-btn">Read more&nbsp;&#x2192;</a>
+                    <h1>Special Help For Vulnerable Women</h1>
+                    <a class="read-more-btn">Read more&nbsp;</a>
                 </div>
             </div>
             <div class="slideshow-item">
                 <img src="resources/group-activity.jpg" class="slideshow-img" alt="group activity photo">
                 <div class="slideshow-txt">
-                    <h1>Group Network Activity</h1>
-                    <a class="read-more-btn">Read more&nbsp;&#x2192;</a>
+                    <h1>Networking Groups Meetings</h1>
+                    <a class="read-more-btn">Read more&nbsp;</a>
                 </div>
             </div>
             <!-- Slideshow buttons -->
-            <div class="center container section large text-white display-bottom-middle">
+            <div class="display-bottom-middle">
                 <!--<div class="left arrow" onclick="plusDivs(-1)">&#10092;</div>-->
                 <span class="badge demo border transparent hover-white" onclick="currentDiv(1)"></span>
                 <span class="badge demo border transparent hover-white" onclick="currentDiv(2)"></span>
@@ -129,8 +134,8 @@
                 <li class="user-choice">
                     <a href="index.html">
                         <img id="img-one" src="resources/autist.jpg" alt="person with autism">
-                        <div class="user-choice-title" id="one">
-                            <h2>Person&nbsp;with&nbsp;autism&nbsp;&#x2192;</h2>
+                        <div class="user-choice-title">
+                            <h4>Person&nbsp;with&nbsp;autism&nbsp;&#x2192;</h4>
                         </div>
                     </a>
                 </li>
@@ -139,7 +144,7 @@
                     <a href="index.html">
                         <img src="resources/parent.jpg" alt="parent of person with autism">
                         <div class="user-choice-title">
-                            <h2>Parent&nbsp;&#x2192;</h2>
+                            <h4>Parent&nbsp;&#x2192;</h4>
                         </div>
                     </a>
                 </li>
@@ -147,8 +152,8 @@
                 <li class="user-choice">
                     <a href="index.html">
                         <img src="resources/social-worker.jpg" alt="social worker">
-                        <div class="user-choice-title" id="three">
-                            <h2>Educator&nbsp;&#x2192;</h2>
+                        <div class="user-choice-title">
+                            <h4>Educator&nbsp;&#x2192;</h4>
                         </div>
                     </a>
                 </li>
@@ -159,7 +164,7 @@
     <footer class="footer-container">
         <!-- Left side logo -->
         <section class="footer-section" id="footer-left-logo-section">
-            <img src="resources/footer-left.png" alt="">
+            <img src="resources/footer-left.png" alt="logo">
         </section>
         <!-- Address & social media section -->
         <section class="footer-section" id="footer-address-and-SoMe-section">
@@ -177,22 +182,24 @@
         </section>
         <!-- Credentials section -->
         <section class="footer-section" id="footer-credentials-section">
-            <img id="credentials-png" src="resources/credentials.png">
+            <img id="credentials-png" src="resources/credentials.png" alt="credentials image">
         </section>
         <!-- Right side logo -->
         <section class="footer-section" id="footer-right-logo-section">
-            <img src="resources/footer-right.png" alt="">
+            <img src="resources/footer-right.png" alt="logo">
         </section>
     </footer>
 
-    <!-- Scripts -->
-    <!-- First try loading jQuery from Google's CDN -->
+    <!---------------------------------------- Scripts ----------------------------------------------->
+    <!-- First try loading jQuery from Google's CDN (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Fall back to a local copy of jQuery if the CDN fails (downloaded from http://jquery.com/)  -->
     <script>
-        window.jQuery || document.write('<script src="js/jquery-3.3.1.min.js"><\/script>');
+        window.jQuery || document.write('<script src="js/jquery-3.4.1.min.js"><\/script>');
     </script>
-    <!-- now we can write jQuery or JavaScript in our own files -->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Own js files -->
     <script src="js/scripts.js"></script>
 </body>
 </html>
