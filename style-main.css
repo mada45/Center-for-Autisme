@@ -377,6 +377,7 @@ footer h4{
 
 .content-container{
     margin-left: 0.5em;
+	margin-right: 0.5em;
 }
 
 .content-title-second{
@@ -436,6 +437,24 @@ footer h4{
 	.subpage-dotts-right{
 		display: none;
 	}
+/*--------------------------------------------------------------
+                     About us
+--------------------------------------------------------------*/
+
+.about-us-boxes{
+	padding: 1em;
+	border: solid 1px black;
+}
+
+.about-us-boxes-text{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+}
+
 
 
 /*--------------------------------------------------------------
