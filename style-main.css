@@ -50,7 +50,7 @@ img {
 }
 
 .icons{
-    width: 20%;
+    width: 2em;
 }
 
 /*--------------------------------------------------------------
@@ -68,7 +68,7 @@ img {
                         Header section
 --------------------------------------------------------------*/
 .header-container{
-    margin: 0.5em;
+    margin: 0.5em 0.5em 0 0.5em;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
@@ -78,75 +78,21 @@ img {
     width: 8em;
 }
 
-.search-and-language-section{
-    display: none;
-}
-
-/*--------------------------------------------------------------
-                          Navigation
---------------------------------------------------------------*/
 .nav-bar-section {
+    grid-column: 2/3;
+    grid-row: 1/2;
     justify-self: flex-end;
     margin: 0 0.5em 0 0;
 }
 
-/*Burger menu - Menu On*/
-#menuon{
-    background: black;
-    color: white;
-    padding: 1em 1.5em 0 0;
-    position: fixed;
-    z-index: 102;
-    opacity: 0;
-}
-
-/*Burger menu - Menu Off*/
-.off{
-    display: none;
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,0.60);
-    z-index: 99;
-}
-
-.nav-bar-section span{
-    display: block;
-    width: 1.6em;
-    height: 2px;
-    background: black;
-    margin-bottom: 4px;
-    z-index: 101;
-}
-
-/* Close button (X) for burger menu*/
-#x{
-    padding: 0.2em;
-    font-size: 2em;
-    font-style: normal;
-    position: fixed;
-    top: 1%;
-    right: 4%;
-    z-index: 102;
-    display: none;
-    opacity: 0.9;
-}
-
-/*Navigation bar*/
-.nav {
-    display: none;
-    background: white;
-    position: fixed;
-    top: 0%;
-    right: 0%;
-    padding: 3em;
+.navbar {
+    display: flex !important;
+    width: 100%;
     z-index: 100;
+    background-color: transparent !important;
 }
 
-/*Links in Navbar*/
-.nav a{
+.navbar a{
     color: black;
     display: block;
     min-width: 10em;
@@ -155,27 +101,32 @@ img {
     font-size: 1.5em;
 }
 
-/*to toggle the burger menu*/
-#togglemenu:checked ~ .nav{
-    display: block;
+.dropdown-menu{
+    z-index: 110;
+    width: 100%;
 }
 
-/*to get rid of the checkbox*/
-#togglemenu{
-    display: none;
+.dropdown-item{
+    z-index: 112;
 }
 
-/*gray space to turn off burger menu*/
-#togglemenu:checked ~ #menu-off{
-    display: block;
+.search-and-language-section{
+    grid-row: 2/3;
+    grid-column: 1/3;
+    display: flex;
+    justify-content: center;
+    padding-top: 2em;
 }
 
-/* X to turn off burger menu*/
-#togglemenu:checked ~ #x{
-    display: block;
+.search-bar-div label{
+    margin: 0 0.5em 0 0;
 }
 
-#togglemenu:checked ~ span{
+.search-bar-div input{
+    border-top: 1px solid rgba(0, 0, 0, 0.50);
+}
+
+.language-btn-div{
     display: none;
 }
 
@@ -184,7 +135,7 @@ img {
 --------------------------------------------------------------*/
 .slideshow-section{
     position: relative;
-    margin: 1em 0 1em 0;
+    margin: 2em 0 1em 0;
 }
 
 .slideshow-item{
@@ -204,13 +155,19 @@ img {
 
 .slideshow-txt{
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 5px;
+    left: 15px;
     color: white;
 }
 
 .slideshow-txt h1{
-    padding: 0.5em 0 1em 0;
+    padding: 0 0 1em 0;
+}
+
+.slideshow-txt h3{
+    font-size: 1.2em;
+    padding: 0 0 1.5em 0;
+    font-weight: 300;
 }
 
 .display-bottom-middle {
@@ -306,6 +263,10 @@ img {
     background-color: black;
 }
 
+.user-choice h4{
+    font-size: 1.2em;
+}
+
 .user-choice img{
     opacity: 0.7;
 }
@@ -327,7 +288,7 @@ img {
 	grid-template-columns: repeat(3, 1fr);
     grid-gap: 5px;
     padding: 4em 1em 4em 1em;
-	border-top: 1px solid black;
+    border-top: 1px solid rgba(0, 0, 0, 0.50);
 	font-size: 0.7em;
 }
 
@@ -484,16 +445,16 @@ footer h4{
                                 Header
     --------------------------------------------------------------*/
     .header-container{
-        margin: 1em 0.5em 1em 0.5em;
+        margin: 1em 2em 1em 2em;
     }
 
     #logo-img{
         width: 10em;
         height: auto;
-        margin-left: 1.5em;
     }
 
     .search-and-language-section{
+        grid-row: 1/2;
         grid-column: 3/4;
         display: flex;
         justify-content: flex-end;
@@ -518,7 +479,7 @@ footer h4{
     }
 
     .language-btn-div{
-        margin: 0 1.5em 0 1.5em;
+        margin: 0 0 0 1.5em;
         height: 2em;
         width: 5em;
         display: flex;
@@ -526,6 +487,7 @@ footer h4{
     }
 
     .nav-bar-section{
+        grid-row: 2/3;
         grid-column: 1/4;
         width: 100%;
         justify-self: center;
@@ -533,14 +495,18 @@ footer h4{
         margin: 3em 0 0 0;
     }
 
-    .nav{
+    .navbar{
         position: static;
-        display: grid !important;
-        grid-template-columns: repeat(6, 1fr);
+        width: 100%;
         padding: 0;
     }
 
-    .nav a{
+    .navbar-nav{
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .navbar a{
         display: inline-block;
         font-size: 1.2em;
         min-width: auto;
@@ -565,7 +531,12 @@ footer h4{
     }
 
     .slideshow-txt h1{
+        padding: 0.5em 0 1em 0;
         font-size: 4em;
+    }
+
+    .slideshow-txt h3{
+        font-size: 1.7em;
     }
 
     .arrow{
@@ -600,9 +571,9 @@ footer h4{
 
     .read-more-btn:hover:after {
         opacity: 1;
-        transition: 0.3s;
         right: 10px;
     }
+
     /*--------------------------------------------------------------
                               User section
     --------------------------------------------------------------*/
@@ -614,10 +585,6 @@ footer h4{
 
     .user-choice{
         margin: 5em 2em 5em 2em;
-    }
-
-    .user-choice h4{
-        font-size: 1.2em;
     }
 
     .user-choice a:hover .user-choice-title{
