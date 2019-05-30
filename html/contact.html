@@ -1,94 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta name="robots" content="noindex, nofollow">
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Center For Autisme</title>
-	<link rel="stylesheet" href="style-main.css" type="text/css" media="all">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="robots" content="noindex, nofollow">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Center For Autisme</title>
+    <link rel="stylesheet" href="../style-main.css" type="text/css" media="all">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
 
 <body class="site-container">
 
-<header class="header-container">
-	<section class="logo-section">
-		<img src="resources/logo.png" id="logo-img" alt="logo of Center for Autisme">
-	</section>
-	<section class="search-and-language-section flex">
-		<div class="search-bar-div flex">
-			<img src="resources/search.svg" class="icons" alt="search bar icon">
-			<input id="search-field" autocomplete="off" placeholder="Search here.." type="text">
-		</div>
-		<div class="language-btn-div flex">
-			<img src="resources/dk.png" class="icons" alt="danish language icon">
-			<img src="resources/eng.png" class="icons" alt="english language icon">
-		</div>
-	</section>
-	<!-- Navigation -->
-	<section class="nav-bar-section">
-		<!--Checkbox to toggle the burger menu-->
-		<input id="togglemenu" type="checkbox" />
-		<!--Label for the checkbox to turn ON-->
-		<label id="menuon" for="togglemenu"></label>
-		<!--Label for X in burger menu-->
-		<label id="x" for="togglemenu"><i class="far fa-times-circle fa-1x" aria-hidden="true"></i></label>
-		<!--Label for the checkbox to turn OFF-->
-		<label class="off" id="menu-off" for="togglemenu"></label>
-		<!--Navigation bar-->
-		<nav class="breadcrumb">
-			<!--Links in Navbar-->
-			<section class="dropdown">
-				<a href="index.html" class="nav-link">Job&nbsp;&&nbsp;Education</a>
-				<ul class="dropdown-content">
-					<li class="nav-item"><a href="contact.html">Employment</a></li>
-					<li class="nav-item"><a href="contact.html">Youth&nbsp;Education</a></li>
-				</ul>
-			</section>
-			<section class="dropdown">
-				<a href="#">Services & Offers</a>
-				<ul class="dropdown-content">
-					<li class="nav-item"><a href="contact.html">Counseling</a>
-						<ul class="dropdown-content" id="dropdown-2nd-level">
-							<li class="nav-item"><a href="contact.html">Parental&nbsp;Advisory</a></li>
-							<li class="nav-item"><a href="contact.html">Teaching</a></li>
-							<li class="nav-item"><a href="contact.html">Courses</a></li>
-						</ul>
-					</li>
-				</ul>
-			</section>
-			<section class="dropdown">
-				<a href="#">Research & Development</a>
-				<ul class="dropdown-content">
-					<li class="nav-item"><a href="contact.html">Venues</a></li>
-					<li class="nav-item"><a href="contact.html">Photographers</a></li>
-					<li class="nav-item"><a href="contact.html">Florists</a></li>
-					<li class="nav-item"><a href="contact.html">Bakers</a></li>
-					<li class="nav-item"><a href="contact.html">Dresses</a></li>
-				</ul>
-			</section>
-			<section class="dropdown">
-				<a href="#">Articles & Advice</a>
-				<ul class="dropdown-content">
-					<li class="nav-item"><a href="contact.html">Photographers</a></li>
-					<li class="nav-item"><a href="contact.html">Florists</a></li>
-					<li class="nav-item"><a href="contact.html">Bakers</a></li>
-					<li class="nav-item"><a href="contact.html">Dresses</a></li>
-				</ul>
-			</section>
-			<a href="contact.html">About us</a>
-			<a href="contact.html">Contact</a>
-		</nav>
-
-		<!--Burger Menu lines-->
-		<span></span>
-		<span></span>
-		<span></span>
-	</section>
-</header>
+<!-- Header section -->
+    <header class="header-container">
+        <!-- Logo - home button -->
+        <section class="logo-section">
+            <a href="index.html"><img src="resources/logo.png" id="logo-img" alt="logo of Center for Autisme"></a>
+        </section>
+        <!-- Search and language options -->
+        <section class="search-and-language-section flex">
+            <div class="search-bar-div flex">
+                <label for="search-field"><img src="resources/search.svg" class="icons" alt="search bar icon"></label>
+                <input id="search-field" autocomplete="off" type="text">
+            </div>
+            <div class="language-btn-div flex">
+                <img src="resources/dk.png" class="icons" alt="danish language icon">
+                <img src="resources/eng.png" class="icons" alt="english language icon">
+            </div>
+        </section>
+        <!-- Navigation -->
+        <section class="nav-bar-section">
+            <nav class="navbar navbar-expand-md navbar-light bg-light collapse navbar-collapse">
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapse_target">
+                    <div class="navbar-nav ml-auto">
+                        <ul class="dropdown">
+                            <li class="nav-item dropdown-toggle"><a href="#" class="nav-link" id="job-and-education-btn" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Job&nbsp;&&nbsp;Education</a></li>
+                            <li class="nav-item dropdown-menu" aria-labelledby="job-and-education-btn">
+                                <ul class="dropdown dropright">
+                                    <li class="nav-item dropdown-item dropdown-toggle"><a class="nav-link" id="employment-btn" href="html/contact.html" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Employment</a></li>
+                                    <li class="nav-item dropdown-menu" aria-labelledby="counseling-btn">
+                                        <a class="nav-link dropdown-item" href="html/contact.html">Work&nbsp;Ability&nbsp;Clarification</a>
+                                        <a class="nav-link dropdown-item" href="html/contact.html">Protected&nbsp;Employement&nbsp;Law&nbsp;103/104</a>
+                                        <a class="nav-link dropdown-item" href="html/contact.html">External&nbsp;Business&nbsp;Course</a>
+                                        <a class="nav-link dropdown-item" href="html/contact.html">Business&nbsp;and&nbsp;Education&nbsp;Mentor</a>
+                                    </li>
+                                </ul>
+                                <ul class="dropdown dropright">
+                                    <li class="nav-item dropdown-item dropdown-toggle"><a class="nav-link" id="youth-education-btn" href="html/contact.html" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Youth&nbsp;Education</a></li>
+                                    <li class="nav-item dropdown-menu" aria-labelledby="counseling-btn">
+                                        <a class="nav-link dropdown-item" href="html/contact.html">About</a>
+                                        <a class="nav-link dropdown-item" href="html/contact.html">Subjects&nbsp;and&nbsp;Teaching</a>
+                                        <a class="nav-link dropdown-item" href="html/contact.html">Graphic&nbsp;and&nbsp;Creative&nbsp;Workshop</a>
+                                        <a class="nav-link dropdown-item" href="html/contact.html">Practicals&nbsp;Info</a>
+                                        <a class="nav-link dropdown-item" href="html/contact.html">Admission</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="dropdown">
+                            <li class="nav-item dropdown-toggle"><a href="#" class="nav-link" id="services-and-offers-btn" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Services&nbsp;&#x26;&nbsp;Offers</a></li>
+                            <li class="nav-item dropdown-menu" aria-labelledby="services-and-offers-btn">
+                                <ul class="dropdown dropright">
+                                    <li class="nav-item dropdown-item dropdown-toggle"><a class="nav-link" a href="#" id="diagnosis-btn" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Diagnosis</a></li>
+                                    <li class="nav-item dropdown-menu" aria-labelledby="diagnosis-btn">
+                                        <a class="nav-link dropdown-item" href="html/contact.html">About&nbsp;The&nbsp;Process&nbsp;Of&nbsp;Diagnosis</a>
+                                        <a class="nav-link dropdown-item" href="html/contact.html">On&nbsp;The&nbsp;Way&nbsp;To&nbsp;Examination</a>
+                                        <a class="nav-link dropdown-item" href="html/contact.html">Investigation&nbsp;And&nbsp;Clarification</a>
+                                        <a class="nav-link dropdown-item" href="html/contact.html">Examination&nbsp;Of&nbsp;Language&nbsp;and&nbsp;Communication</a>
+                                        <a class="nav-link dropdown-item" href="html/contact.html">Psychological&nbsp;Functional&nbsp;Assesment</a>
+                                        <a class="nav-link dropdown-item" href="html/contact.html">Neuropsychological&nbsp;Examination</a>
+                                        <a class="nav-link dropdown-item" href="html/contact.html">Refferal&nbsp;And&nbsp;Prices</a>
+                                    </li>
+                                </ul>
+                                <ul class="dropdown dropright">
+                                    <li class="nav-item dropdown-item dropdown-toggle"><a class="nav-link" a href="#" id="counseling-btn" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Counseling</a></li>
+                                    <li class="nav-item dropdown-menu" aria-labelledby="counseling-btn">
+                                        <a class="nav-link dropdown-item" href="html/contact.html">About&nbsp;Counseling</a>
+                                        <a class="nav-link dropdown-item" href="html/contact.html">Phone&nbsp;Counseling</a>
+                                        <a class="nav-link dropdown-item" href="html/contact.html">Psychoeducation</a>
+                                        <a class="nav-link dropdown-item" href="html/contact.html">Sexual&nbsp;Instruction</a>
+                                        <a class="nav-link dropdown-item" href="html/contact.html">Parental&nbsp;Advisory</a>
+                                        <a class="nav-link dropdown-item" href="html/contact.html">Advice&nbsp;For&nbsp;Professionals</a>
+                                        <a class="nav-link dropdown-item" href="html/contact.html">Refferal&nbsp;And&nbsp;Prices</a>
+                                    </li>
+                                </ul>
+                                <ul class="dropdown dropright">
+                                    <li class="nav-item dropdown-item dropdown-toggle"><a class="nav-link" a href="#" id="networking-group-btn" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Networking&nbsp;Groups</a></li>
+                                    <li class="nav-item dropdown-menu" aria-labelledby="networking-group-btn">
+                                        <a class="nav-link dropdown-item" href="html/contact.html">About&nbsp;The&nbsp;Networking&nbsp;Groups</a>
+                                        <a class="nav-link dropdown-item" href="html/contact.html">Special&nbsp;Educational&nbsp;Support&nbsp;And&nbsp;Guidance</a>
+                                        <a class="nav-link dropdown-item" href="html/contact.html">Girl&nbsp;Group</a>
+                                        <a class="nav-link dropdown-item" href="html/contact.html">Junior&nbsp;Girl&nbsp;Group</a>
+                                        <a class="nav-link dropdown-item" href="html/contact.html">Junior&nbsp;Group</a>
+                                        <a class="nav-link dropdown-item" href="html/contact.html">Teenage&nbsp;Group</a>
+                                        <a class="nav-link dropdown-item" href="html/contact.html">Adult&nbsp;Group</a>
+                                        <a class="nav-link dropdown-item" href="html/contact.html">Youth&nbsp;Group</a>
+                                    </li>
+                                </ul>
+                                <a class="nav-item nav-link dropdown-item" id="courses-btn" href="html/contact.html" role="button">Courses</a>
+                                <a class="nav-item nav-link dropdown-item" id="teaching-btn" href="html/contact.html" role="button">Teaching</a>
+                            </li>
+                        </ul>
+                        <ul class="dropdown">
+                            <li class="nav-item dropdown-toggle"><a href="#" class="nav-link" id="research-and-development-btn" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Research&nbsp;&#x26;&nbsp;Development</a></li>
+                            <li class="nav-item dropdown-menu" aria-labelledby="research-and-development-btn">
+                                <a class="nav-link dropdown-item" href="html/contact.html">About&nbsp;FUA</a>
+                                <a class="nav-link dropdown-item" href="html/contact.html">Projects</a>
+                            </li>
+                        </ul>
+                        <ul class="dropdown">
+                            <li class="nav-item dropdown-toggle"><a href="#" class="nav-link" id="articles-and-advice-btn" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles&nbsp;&#x26;&nbsp;Advice</a></li>
+                            <li class="nav-item dropdown-menu" aria-labelledby="articles-and-advice-btn">
+                                <a class="nav-link dropdown-item" href="html/contact.html">Useful&nbsp;links</a>
+                                <a class="nav-link dropdown-item" href="html/contact.html">Laws&nbsp;and&nbsp;Regulations</a>
+                            </li>
+                        </ul>
+                        <ul class="dropdown">
+                            <li class="nav-item dropdown-toggle"><a href="#" class="nav-link" id="about-us-btn" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">About&nbsp;us</a></li>
+                            <li class="nav-item dropdown-menu" aria-labelledby="about-us-btn">
+                                <a class="nav-link dropdown-item" href="html/contact.html">Organization</a>
+                                <a class="nav-link dropdown-item" href="html/contact.html">Employees</a>
+                                <a class="nav-link dropdown-item" href="html/contact.html">Testimonials</a>
+                                <a class="nav-link dropdown-item" href="html/contact.html">Press</a>
+                                <a class="nav-link dropdown-item" href="html/contact.html">Job&nbsp;vacancies</a>
+                            </li>
+                        </ul>
+                        <a class="nav-item nav-link" id="contact-btn" href="html/contact.html" role="button">Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </section>
+    </header>
 	
 	<main class="main-container">
+	<section class="subpage-layout">
 		
 		<section class="breadcrumbs-section-mobile">
 			<a href="#">Contact</a>
@@ -98,15 +146,33 @@
 			<a href="#">FAQ</a>
 		</section>
 		
+		<section class="breadcrumbs-section-desktop">
+			
+			<p class="bold-font breadcrumbs-title">Contact</p>
+			
+			<ul class="breadcrumbs-list">
+				<li><a href="#">Contact Us</a></li>
+				<li><a href="#">FAQ</a></li>
+			</ul>
+			
+			<section class="subpage-dotts-left">
+            	<img src="../resources/footer-left.png" alt="">
+        	</section>
+			
+		</section>
+		
+		
+		
 		<section class="content-container">
 			
 			<h2 class="content-title bottom-margin">Contact Us</h2>
 			
+			<section id="contact-info-section">
 			<article class="bottom-margin">
 				<p class="content-title-second">Phone hours</p>
 				<p class="content-text">Tuesday: 08.00-18.00<br>
-				Pedagogical/Psychological Questions: 13.00-14.00<br>
-				Underage Children Social Questions: 14.00-15.00</p>
+				Pedagogical/Psychological Questions:<br>13.00-14.00<br>
+				Underage Children Social Questions:<br>14.00-15.00</p>
 			</article>
 			
 			<article class="bottom-margin">
@@ -116,41 +182,55 @@
 				+45 26 25 28 56<br>
 				+45 51 27 78 01</p>
 			</article>
+			</section>
+			
+			<button class="bold-font bottom-margin" id="see-employees-btn">See employees</button>
+			<section>
+			
+				<p class="bold-font content-text">Address:</p>
+					<p class="content-text bottom-margin">Herlev Hovedgade 199, 2730 Herlev</p>
+			
+			</section>
+			
+			
+			<section class="bottom-margin" id="map-container">
+				<iframe id="contact-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2246.945920848004!2d12.42107221582726!3d55.72469198054582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46524fd3b34b9035%3A0x5531fd7e380de8fe!2sCenter+For+Autism!5e0!3m2!1sen!2sdk!4v1558960759106!5m2!1sen!2sdk" frameborder="0" style="border:0" allowfullscreen></iframe>
+			</section>
+			
+			<div class="bottom-margin" id="contact-social-media-container">
+                <a href="https://www.facebook.com/"><img src="../resources/fb.png" alt="facebook button"></a>
+                <a href="https://www.instagram.com/"><img src="../resources/insta.png" alt="instagram button"></a>
+                <a href="https://www.youtube.com/"><img src="../resources/youtube.png" alt="youtube button"></a>
+                <a href="https://www.linkedin.com/"><img src="../resources/linkedIn.png" alt="linkedIn button"></a>
+            </div>
+			
 		</section>
 		
-		<section class="bottom-margin" id="map-container">
-		<iframe id="contact-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2246.945920848004!2d12.42107221582726!3d55.72469198054582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46524fd3b34b9035%3A0x5531fd7e380de8fe!2sCenter+For+Autism!5e0!3m2!1sen!2sdk!4v1558960759106!5m2!1sen!2sdk" frameborder="0" style="border:0" allowfullscreen></iframe>
-		</section>
+		<section class="subpage-dotts-right">
+            	<img src="../resources/footer-right.png" alt="">
+			<img class="subpage-dotts-right-individual" src="../resources/footer-right.png" alt="">
+        	</section>
 		
 		
 		
-		<!--<section class="breadcrumbs-section-desktop">
-			
-			<p class="breadcrumbs-title">Contact</p>
-			
-			<ul class="breadcrumbs-list">
-				<li><a href="#">Contact Us</a></li>
-				<li><a href="#">FAQ</a></li>
-			</ul>
-			
-		</section>-->
 		
+	</section>	
 	</main>
 	
-	<footer class="footer-container">
-		<article>
-			<p>Herlev Hovedgade 199, 2730 Herlev<br>Phone: +45 44 98 23 55<br>Fax: +45 44 98 23 53<br>info@centerforautisme.dk</p>
-		</article>
-    </footer>
 
-    <!-- Scripts -->
-    <!-- First try loading jQuery from Google's CDN -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!---------------------------------------- Scripts ----------------------------------------------->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- First try loading jQuery from Google's CDN (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Fall back to a local copy of jQuery if the CDN fails (downloaded from http://jquery.com/)  -->
     <script>
-        window.jQuery || document.write('<script src="js/jquery-3.3.1.min.js"><\/script>');
+        window.jQuery || document.write('<script src="js/jquery-3.4.1.min.js"><\/script>');
     </script>
-    <!-- now we can write jQuery or JavaScript in our own files -->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Own js files -->
     <script src="js/scripts.js"></script>
 	
 </body>
