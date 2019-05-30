@@ -1,18 +1,37 @@
 $(() => {
+
     // ** Variables ** //
-    const $dropdownToogle = $('.dropdown-toggle');
+    const $dropdown = $('.dropdown');
+    const $dropdownToggle = $('.dropdown-toggle');
+    const $dropdownMenu = $('.dropdown-menu');
+    const $navlink = $('.nav-link');
+    const $navItem = $('.nav-item');
 
 /*--------------------------------------------------------------
                         Navigation
 --------------------------------------------------------------*/
 
-$dropdownToogle.on("mouseenter", function () {
-    $(this).dropdown('show')
+/*$dropdownToggle.on("mouseenter", function () {
+    // $(this).dropdown('show');
+     $(this).next('li').show();
 });
 
-$dropdownToogle.on("mouseleave", function () {
-    $(this).dropdown('hide')
+$dropdownMenu.on("mouseleave", function () {
+     $(this).dropdown('hide');
+});*/
+
+/*$dropdownToggle.on("mouseleave", function() {
+    $dropdownMenu('hide');
+});*/
+
+$dropdownToggle.on("mouseenter", function(){
+    $(this).next('li').toggle();
 });
+
+$dropdownMenu.on("mouseleave", function(){
+    $(this).hide();
+});
+
 /*--------------------------------------------------------------
                         Homepage slideshow
 --------------------------------------------------------------*/
@@ -58,7 +77,7 @@ function carousel() {
     myIndex++;
     if (myIndex > x.length) {myIndex = 1}
     x[myIndex-1].style.display = "block";
-    setTimeout(carousel, 3000); // Change image every 3 seconds
+    setTimeout(carousel, 4000); // Change image every 3 seconds
 }
 
 /* Nav link active */
