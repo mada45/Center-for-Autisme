@@ -111,6 +111,11 @@ img {
     top: 0;
 }
 
+.dropdown-menu{
+    margin-top: 0;
+    padding: 5px;
+}
+
 .dropdown-toggle::after {
     display:none !important;
 }
@@ -477,10 +482,12 @@ footer h4{
 	.subpage-dotts-right{
 		display: none;
 	}
-/*--------------------------------------------------------------
-                     About us
---------------------------------------------------------------*/
 
+/*--------------------------------------------------------------
+----------------------------------------------------------------
+----------------------- About us page ---------------------------
+----------------------------------------------------------------
+--------------------------------------------------------------*/
 .about-us-boxes{
 	padding: 1em;
 	border: solid 1px black;
@@ -622,22 +629,27 @@ footer h4{
         padding: 0.5em 1em 0.5em 1em !important;
     }
 
-    #nav-section .navbar-nav li > a {
+    #nav-section .navbar-nav  > li, .nav-link {
         transition: background-color .2s, color .2s;
     }
 
 
-    #nav-section .navbar-nav li > a:hover, a:focus {
+    #nav-section .navbar-nav > li:hover, li:focus, .nav-link:hover, .nav-link:focus {
         background-color: #ce2020;
         color: #fff;
         border-radius: 0.2em;
     }
 
-    #nav-section .navbar-nav li.active > a {
+    /*#nav-section .navbar-nav li.active > a {
         background-color: #ce2020;
         color: #fff;
-    }
+    }*/
 
+    .dropdown-item.active, .dropdown-item:active {
+        background-color: #ce2020;
+        color: #fff;
+        border-radius: 0.2em;
+    }
     /*--------------------------------------------------------------
                             Slideshow section
     --------------------------------------------------------------*/
