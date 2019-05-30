@@ -126,7 +126,7 @@ img {
 
 .navbar-toggler {
     border: none;
-    outline: none;
+    outline: none !important;
     background: transparent !important;
 }
 
