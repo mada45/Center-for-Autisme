@@ -5,13 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1  shrink-to-fit=no">
     <title>Center For Autisme</title>
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap  -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Css files -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- Css file -->
     <link rel="stylesheet" href="style-main.css" type="text/css" media="all">
     <!-- Icon source -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <!-- Font source -->
+    <link rel="stylesheet" href="https://use.typekit.net/kgs1xba.css">
 </head>
 <body class="site-container">
     <!-- Header section -->
@@ -32,13 +36,15 @@
             </div>
         </section>
         <!-- Navigation -->
-        <section class="nav-bar-section">
-            <nav class="navbar navbar-expand-md navbar-light bg-light collapse navbar-collapse">
-                <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
-                    <span class="navbar-toggler-icon"></span>
+        <section class="nav-bar-section" id="nav-section">
+            <nav class="navbar navbar-expand-md">
+                <button class="navbar-toggler ml-auto collapsed" data-toggle="collapse" data-target="#collapse_target">
+                    <span class="icon-bar top-bar"></span>
+                    <span class="icon-bar middle-bar"></span>
+                    <span class="icon-bar bottom-bar"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="collapse_target">
-                    <div class="navbar-nav ml-auto">
+                    <div class="navbar-nav">
                         <ul class="dropdown">
                             <li class="nav-item dropdown-toggle"><a href="#" class="nav-link" id="job-and-education-btn" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Job&nbsp;&&nbsp;Education</a></li>
                             <li class="nav-item dropdown-menu" aria-labelledby="job-and-education-btn">
@@ -139,9 +145,9 @@
     </header>
     <!-- Main section -->
     <main class="main-container">
-        <!-- Slider section -->
+        <!-- Slideshow section -->
         <section class="slideshow-section">
-            <!-- Slideshow offers -->
+            <!-- Slideshow items -->
             <div class="slideshow-item">
                 <img src="resources/diagnosis.jpg" class="slideshow-img" alt="diagnosis slideshow photo">
                 <div class="slideshow-txt">
@@ -183,7 +189,7 @@
                     <a href="index.html">
                         <img id="img-one" src="resources/autist.jpg" alt="person with autism">
                         <div class="user-choice-title">
-                            <h4>Person&nbsp;with&nbsp;autism&nbsp;&#x2192;</h4>
+                            <h4>Person with autism</h4>
                         </div>
                     </a>
                 </li>
@@ -192,7 +198,7 @@
                     <a href="index.html">
                         <img src="resources/parent.jpg" alt="parent of person with autism">
                         <div class="user-choice-title">
-                            <h4>Parent&nbsp;&#x2192;</h4>
+                            <h4>Parent</h4>
                         </div>
                     </a>
                 </li>
@@ -201,7 +207,7 @@
                     <a href="index.html">
                         <img src="resources/social-worker.jpg" alt="social worker">
                         <div class="user-choice-title">
-                            <h4>Educator&nbsp;&#x2192;</h4>
+                            <h4>Educator</h4>
                         </div>
                     </a>
                 </li>
@@ -239,17 +245,12 @@
     </footer>
 
     <!---------------------------------------- Scripts ----------------------------------------------->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!-- First try loading jQuery from Google's CDN (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Fall back to a local copy of jQuery if the CDN fails (downloaded from http://jquery.com/)  -->
     <script>
         window.jQuery || document.write('<script src="js/jquery-3.4.1.min.js"><\/script>');
     </script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
     <!-- Own js files -->
     <script src="js/scripts.js"></script>
 </body>
