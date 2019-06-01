@@ -502,6 +502,35 @@ footer h4{
 	text-align: center;
 }
 
+.about-us-management-popup{
+	display: none;
+	border: 1px solid black;
+	z-index: 9999;
+	position: fixed;
+	top: 1em;
+	right: 1em;
+	bottom: 1em;
+	left: 1em;
+}
+
+
+
+.popup-title-x{
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+	justify-content: center;
+}
+
+.popup-close{
+	position: absolute;
+	right: 0;
+	margin-right: 0.5em;
+}
+
+.bold-font{
+	font-weight: 600;
+}
 
 
 /*--------------------------------------------------------------
@@ -920,4 +949,39 @@ footer h4{
 	#contact-social-media-container a{
 		margin-right: 0.5em;
 	}
+	
+	#about-us-boxes-container-one{
+		display: flex;
+		justify-content:space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		flex-direction: row;
+	}
+	
+	#about-us-boxes-container-two{
+		display: flex;
+		justify-content:space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		flex-direction: row;
+	}
+	
+	.about-us-boxes{
+		padding: 1em 6em;
+		cursor: pointer;
+	}
+	
+	#business-box{
+		padding: 1em 3.5em;
+	}
+	
+	#research-box{
+		padding: 0.5em 4.1em;
+	}
+	
+	#studies-box{
+		padding: 1em 5.1em
+	}
+	
+	
 }
