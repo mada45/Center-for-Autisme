@@ -7,29 +7,36 @@ $(() => {
     const $navlink = $('.nav-link');
     const $navItem = $('.nav-item');
 
-/*--------------------------------------------------------------
-                        Navigation
---------------------------------------------------------------*/
+    /*--------------------------------------------------------------
+                            Navigation
+    --------------------------------------------------------------*/
 
-/*$dropdownToggle.on("mouseenter", function () {
-    // $(this).dropdown('show');
-     $(this).next('li').show();
-});
+    /*$dropdownToggle.on("mouseenter", function () {
+        // $(this).dropdown('show');
+         $(this).next('li').show();
+    });
 
-$dropdownMenu.on("mouseleave", function () {
-     $(this).dropdown('hide');
-});*/
+    $dropdownMenu.on("mouseleave", function () {
+         $(this).dropdown('hide');
+    });*/
 
-/*$dropdownToggle.on("mouseleave", function() {
-    $dropdownMenu('hide');
-});*/
+    /*$dropdownToggle.on("mouseleave", function() {
+        $dropdownMenu('hide');
+    });*/
 
-$dropdownToggle.on("mouseenter", function(){
-    $(this).next('li').toggle();
-});
+    $dropdownToggle.on("mouseenter", function(){
+        $(this).next('li').toggle();
+    });
 
-$dropdownMenu.on("mouseleave", function(){
-    $(this).hide();
+    $dropdownMenu.on("mouseleave", function(){
+        $(this).hide();
+    });
+
+    $( '#nav-section .navbar-nav a' ).on( 'click', function () {
+        $( '#nav-section .navbar-nav' ).find( 'li.active' ).removeClass( 'active' );
+        $( this ).parent( 'li' ).addClass( 'active' );
+    });
+
 });
 
 /*--------------------------------------------------------------
@@ -37,6 +44,7 @@ $dropdownMenu.on("mouseleave", function(){
 --------------------------------------------------------------*/
 var slideIndex = 1;
 showDivs(slideIndex);
+
 
 function plusDivs(n) {
     showDivs(slideIndex += n);
@@ -71,12 +79,17 @@ carousel();
 function carousel() {
     var i;
     var x = document.getElementsByClassName("slideshow-item");
+    var dots = document.getElementsByClassName("demo");
     for (i = 0; i < x.length; i++) {
         x[i].style.display = "none";
     }
     myIndex++;
     if (myIndex > x.length) {myIndex = 1}
     x[myIndex-1].style.display = "block";
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" white", "");
+    }
+    dots[myIndex-1].className += " white";
     setTimeout(carousel, 4000); // Change image every 3 seconds
 }
 
@@ -91,4 +104,3 @@ for (var i = 0; i < link.length; i++) {
     });
 }*/
 
-});
