@@ -104,3 +104,6 @@ for (var i = 0; i < link.length; i++) {
     });
 }*/
 
+$("#management").click(function(){
+  $(".about-us-management-popup").toggle();
+});

@@ -880,7 +880,7 @@ footer h4{
 
 	.content-container{
 		grid-column: 2/3;
-		margin: 2em 0 0 0em;
+		margin: 2em 3em 0 3em;
 	}
 	
 	#contact-info-section{
@@ -924,7 +924,7 @@ footer h4{
 	
 	.subpage-dotts-right{
 		grid-column: 3/3;
-		width: 10em;
+		width: 35em;
 		height: auto;
 		display: block;
 		margin-top: 4em;
@@ -983,5 +983,10 @@ footer h4{
 		padding: 1em 5.1em
 	}
 	
+	/*--------------------------------------------------
+	----------------Work Ability CLarification-----------------------*/
 	
+	.breadcrumb-second-layer{
+		margin-left: 1em;
+	}
 }
