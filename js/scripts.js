@@ -13,6 +13,22 @@ $(() => {
     /*--------------------------------------------------------------
                             Navigation
     --------------------------------------------------------------*/
+    /* Show dropdown-submenu */
+    $dropdownToggle.on('click', function(e) {
+        if (!$(this).next().hasClass('show')) {
+            $(this).parents($dropdownMenu).first().find('.show').removeClass("show");
+        }
+        var $subMenu = $(this).next($dropdownMenu);
+        $subMenu.toggleClass('show');
+
+
+        $(this).parents('.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+            $('.dropdown-submenu .show').removeClass("show");
+        });
+
+        return false;
+    });
+
     /* Nav link active */
     $navlink.click(function(){
         $navlink.removeClass('active');
@@ -23,7 +39,6 @@ $(() => {
     $navbarToggler.click(function(){
         $navbar.toggleClass('navbar-white');
     });
-
 
 });
 
@@ -79,6 +94,9 @@ function carousel() {
     setTimeout(carousel, 4000); // Change image every 3 seconds
 }
 
+/*--------------------------------------------------------------
+                        ?
+--------------------------------------------------------------*/
 
 function popup() {
   document.getElementById("about-us-management-popup").style.display = "block";
