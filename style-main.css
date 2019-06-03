@@ -507,6 +507,35 @@ footer h4{
 	text-align: center;
 }
 
+.about-us-management-popup{
+	display: none;
+	border: 1px solid black;
+	z-index: 9999;
+	position: fixed;
+	top: 1em;
+	right: 1em;
+	bottom: 1em;
+	left: 1em;
+}
+
+
+
+.popup-title-x{
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+	justify-content: center;
+}
+
+.popup-close{
+	position: absolute;
+	right: 0;
+	margin-right: 0.5em;
+}
+
+.bold-font{
+	font-weight: 600;
+}
 
 
 /*--------------------------------------------------------------
@@ -958,7 +987,11 @@ footer h4{
 
 	.content-container{
 		grid-column: 2/3;
+<<<<<<< HEAD
 		margin: 2em 0 0 0;
+=======
+		margin: 2em 3em 0 3em;
+>>>>>>> 2e14581e36ca0bd6dfee54133942a5e9061a6ecc
 	}
 	
 	#contact-info-section{
@@ -1002,7 +1035,7 @@ footer h4{
 	
 	.subpage-dotts-right{
 		grid-column: 3/3;
-		width: 10em;
+		width: 35em;
 		height: auto;
 		display: block;
 		margin-top: 4em;
@@ -1026,5 +1059,45 @@ footer h4{
 	
 	#contact-social-media-container a{
 		margin-right: 0.5em;
+	}
+	
+	#about-us-boxes-container-one{
+		display: flex;
+		justify-content:space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		flex-direction: row;
+	}
+	
+	#about-us-boxes-container-two{
+		display: flex;
+		justify-content:space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		flex-direction: row;
+	}
+	
+	.about-us-boxes{
+		padding: 1em 6em;
+		cursor: pointer;
+	}
+	
+	#business-box{
+		padding: 1em 3.5em;
+	}
+	
+	#research-box{
+		padding: 0.5em 4.1em;
+	}
+	
+	#studies-box{
+		padding: 1em 5.1em
+	}
+	
+	/*--------------------------------------------------
+	----------------Work Ability CLarification-----------------------*/
+	
+	.breadcrumb-second-layer{
+		margin-left: 1em;
 	}
 }

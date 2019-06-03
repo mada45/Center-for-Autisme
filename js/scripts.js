@@ -80,3 +80,6 @@ function carousel() {
 }
 
 
+$("#management").click(function(){
+  $(".about-us-management-popup").toggle();
+});
