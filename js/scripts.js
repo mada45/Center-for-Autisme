@@ -80,6 +80,18 @@ function carousel() {
 }
 
 
-$("#management").click(function(){
-  $(".about-us-management-popup").toggle();
-});
+function popup() {
+  document.getElementById("about-us-management-popup").style.display = "block";
+}
+
+function popupClose() {
+  document.getElementById("about-us-management-popup").style.display = "none";
+}
+
+function popupBg() {
+  document.getElementById("dark-bg-popup-close").style.display = "block";
+}
+
+function popupCloseBg() {
+  document.getElementById("dark-bg-popup-close").style.display = "none";
+}
