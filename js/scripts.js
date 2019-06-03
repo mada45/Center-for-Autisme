@@ -1,43 +1,32 @@
 $(() => {
 
     // ** Variables ** //
+    const $navbar = $('.navbar');
+    const $navbarToggler = $('.navbar-toggler');
     const $dropdown = $('.dropdown');
     const $dropdownToggle = $('.dropdown-toggle');
     const $dropdownMenu = $('.dropdown-menu');
+    const $dropdownItem = $('.dropdown-item');
     const $navlink = $('.nav-link');
     const $navItem = $('.nav-item');
 
     /*--------------------------------------------------------------
                             Navigation
     --------------------------------------------------------------*/
-
-    /*$dropdownToggle.on("mouseenter", function () {
-        // $(this).dropdown('show');
-         $(this).next('li').show();
+    /* Nav link active */
+    $navlink.click(function(){
+        $navlink.removeClass('active');
+        $(this).addClass('active');
     });
 
-    $dropdownMenu.on("mouseleave", function () {
-         $(this).dropdown('hide');
-    });*/
-
-    /*$dropdownToggle.on("mouseleave", function() {
-        $dropdownMenu('hide');
-    });*/
-
-    $dropdownToggle.on("mouseenter", function(){
-        $(this).next('li').toggle();
+    /* Navbar white background on mobile */
+    $navbarToggler.click(function(){
+        $navbar.toggleClass('navbar-white');
     });
 
-    $dropdownMenu.on("mouseleave", function(){
-        $(this).hide();
-    });
-
-    $( '#nav-section .navbar-nav a' ).on( 'click', function () {
-        $( '#nav-section .navbar-nav' ).find( 'li.active' ).removeClass( 'active' );
-        $( this ).parent( 'li' ).addClass( 'active' );
-    });
 
 });
+
 
 /*--------------------------------------------------------------
                         Homepage slideshow
@@ -70,9 +59,6 @@ function showDivs(n) {
     dots[slideIndex-1].className += " white";
 }
 
-/*--------------------------------------------------------------
-                        Slideshow automation
---------------------------------------------------------------*/
 var myIndex = 0;
 carousel();
 
@@ -93,14 +79,4 @@ function carousel() {
     setTimeout(carousel, 4000); // Change image every 3 seconds
 }
 
-/* Nav link active */
-/*
-var link = document.getElementById("nav-link");
-for (var i = 0; i < link.length; i++) {
-    link[i].addEventListener("click", function() {
-        var current = document.getElementsByClassName("active");
-        current[0].className = current[0].className.replace(" active", "");
-        this.className += " active";
-    });
-}*/
 
