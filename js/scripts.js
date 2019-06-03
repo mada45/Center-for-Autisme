@@ -14,15 +14,15 @@ $(() => {
                             Navigation
     --------------------------------------------------------------*/
     /* Show dropdown-submenu */
-    $dropdownToggle.on('click', function(e) {
+    $('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
         if (!$(this).next().hasClass('show')) {
-            $(this).parents($dropdownMenu).first().find('.show').removeClass("show");
+            $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
         }
-        var $subMenu = $(this).next($dropdownMenu);
+        var $subMenu = $(this).next(".dropdown-menu");
         $subMenu.toggleClass('show');
 
 
-        $(this).parents('.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+        $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
             $('.dropdown-submenu .show').removeClass("show");
         });
 
