@@ -185,12 +185,12 @@
 					<p class="content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				</article>
 
-				<button class="bold-font bottom-margin" id="see-employees-btn">See employees</button>
+				<button class="bold-font bottom-margin" id="see-employees-btn">See full list of employees</button>
 				
 				<section id="about-us-boxes-container-one">
 					
 					
-					<section id="management" class="about-us-boxes bottom-margin">
+					<section onclick="popup(); popupBg();" class="about-us-boxes bottom-margin">
 
 						<p class="about-us-boxes-text bold-font">Management</p>
 
@@ -234,19 +234,40 @@
 				
 
 			</section>
-			
-			<section class="about-us-management-popup">
-			
+			<section id="dark-bg-popup-close" onClick="popupClose(); popupCloseBg();"></section>
+			<section id="about-us-management-popup">
+				
 				<article class="popup-title-x">
+					
 					<p class="content-title bold-font bottom-margin">Management</p>
-					<p class="popup-close">X</p>
+					<p onClick="popupClose(); popupCloseBg();" class="popup-close">X</p>
 				</article>
 				
 				<section class="about-us-employees-boxes-container">
-					
-					<article class="about-us-employees-boxes">
-						
+					<article class="bottom-margin" id="about-us-employees-boxes-one">
+						<p>Mette<br>Info</p>
 					</article>
+					
+					<article class="bottom-margin" id="about-us-employees-boxes-two">
+						<p>Jakob<br>Info</p>
+					</article>
+					
+					<article class="bottom-margin" id="about-us-employees-boxes-three">
+						<p>Magnus<br>Info</p>
+					</article>
+					
+					<article class="bottom-margin" id="about-us-employees-boxes-four">
+						<p>Fie<br>Info</p>
+					</article>
+					
+					<article class="bottom-margin" id="about-us-employees-boxes-five">
+						<p>Inga<br>Info</p>
+					</article>
+					
+					<article class="bottom-margin" id="about-us-employees-boxes-six">
+						<p>Asmus<br>Info</p>
+					</article>
+					
 				</section>
 			
 			</section>

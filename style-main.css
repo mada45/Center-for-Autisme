@@ -508,11 +508,11 @@ footer h4{
 		margin-right: 0.2em;
 	}
 
-.subpage-dotts-left{
+#subpage-dotts-right-contact{
 		display: none;
 	}
 	
-.subpage-dotts-right{
+#subpage-dotts-right-employees{
 		display: none;
 	}
 
@@ -535,15 +535,16 @@ footer h4{
 	text-align: center;
 }
 
-.about-us-management-popup{
+#about-us-management-popup{
 	display: none;
-	border: 1px solid black;
 	z-index: 9999;
 	position: fixed;
 	top: 1em;
 	right: 1em;
 	bottom: 1em;
 	left: 1em;
+	background: white;
+	overflow:auto;
 }
 
 
@@ -559,6 +560,110 @@ footer h4{
 	position: absolute;
 	right: 0;
 	margin-right: 0.5em;
+}
+
+.about-us-employees-boxes-container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+	flex-direction: column;
+}
+
+#about-us-employees-boxes-one{
+	position: relative;
+	min-height: 12em;
+	min-width: 10em;
+	max-width: 10em;
+	background: url("resources/daniil_lobachev_1440_9gvCF.jpg");
+	background-size: cover;
+    background-position:top;
+	border-bottom: grey solid 1px;
+	border-top-right-radius: 25px;
+}
+
+#about-us-employees-boxes-two{
+	position: relative;
+	min-height: 12em;
+	min-width: 10em;
+	max-width: 10em;
+	background: url("resources/sandy_millar_1474214_fZIlM.jpg");
+	background-size: cover;
+    background-position: bottom;
+	border-top-right-radius: 25px;
+	border-bottom: grey solid 1px;
+}
+
+#about-us-employees-boxes-three{
+	position: relative;
+	min-height: 12em;
+	min-width: 10em;
+	max-width: 10em;
+	background: url("resources/photo (1).jpg");
+	background-size: cover;
+    background-position: top;
+	border-top-right-radius: 25px;
+	border-bottom: grey solid 1px;
+}
+
+#about-us-employees-boxes-four{
+	position: relative;
+	min-height: 12em;
+	min-width: 10em;
+	max-width: 10em;
+	background: url("resources/patrick_amoy_1619159_mYfh8.jpg");
+	background-size: cover;
+    background-position: center;
+	border-top-right-radius: 25px;
+	border-bottom: grey solid 1px;
+}
+
+#about-us-employees-boxes-five{
+	position: relative;
+	min-height: 12em;
+	min-width: 10em;
+	max-width: 10em;
+	background: url("resources/unsplash.jpg");
+	background-size: cover;
+    background-position: right;
+	border-top-right-radius: 25px;
+	border-bottom: grey solid 1px;
+}
+
+#about-us-employees-boxes-six{
+	position: relative;
+	min-height: 12em;
+	min-width: 10em;
+	max-width: 10em;
+	background: url("resources/yucel_moran_1423823__8pM22.jpg");
+	background-size: cover;
+    background-position: center;
+	border-top-right-radius: 25px;
+	border-bottom: grey solid 1px;
+}
+
+.about-us-employees-boxes-container article p{
+	font-weight: 600;
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	background: white;
+	margin: 0;
+	padding-right: 9em;
+	padding-left: 0.2em;
+	border-left: 10px grey solid;
+}
+
+#dark-bg-popup-close{
+	z-index: 2;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	background: black;
+	opacity: 0.5;
+	display: none;
 }
 
 .bold-font{
@@ -1038,6 +1143,17 @@ footer h4{
 	}
 
 	.content-container{
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+		grid-column: 2/3;
+		margin: 2em 0 0 0;
+=======
+		margin: 2em 0 0 0;
+>>>>>>> origin/master
+>>>>>>> f38b17ee90db2bbd38238f25b6e87440856644e2
 		margin: 1em 6em 0 6em;
 	}
 	
