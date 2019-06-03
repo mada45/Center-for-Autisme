@@ -790,7 +790,6 @@ footer h4{
     --------------------------------------------------------------*/
     .slideshow-section{
         margin: 0;
-		
     }
 
     .slideshow-item {
@@ -1035,6 +1034,22 @@ footer h4{
 	
 	.subpage-dotts-right{
 		width: 35em;
+		height: auto;
+		display: block;
+		margin-top: 10em;
+		margin-right: 2em;
+	}
+	
+	#subpage-dotts-right-contact{
+		width: 10em;
+		height: auto;
+		display: block;
+		margin-top: 10em;
+		margin-right: 2em;
+	}
+	
+	#subpage-dotts-right-employees{
+		width: 15em;
 		height: auto;
 		display: block;
 		margin-top: 10em;
