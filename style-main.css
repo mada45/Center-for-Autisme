@@ -607,7 +607,15 @@ img {
 	margin-right: 0.5em;
 }
 
-.about-us-employees-boxes-container{
+.about-us-employees-boxes-container-one{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+	flex-direction: column;
+}
+
+.about-us-employees-boxes-container-two{
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -687,7 +695,19 @@ img {
 	border-bottom: grey solid 1px;
 }
 
-.about-us-employees-boxes-container article p{
+.about-us-employees-boxes-container-one article p{
+	font-weight: 600;
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	background: white;
+	margin: 0;
+	padding-right: 9em;
+	padding-left: 0.2em;
+	border-left: 10px grey solid;
+}
+
+.about-us-employees-boxes-container-two article p{
 	font-weight: 600;
 	position: absolute;
 	left: 0;
@@ -713,6 +733,79 @@ img {
 
 .bold-font{
 	font-weight: 600;
+}
+
+#dropdown-boxes-btn-one{
+	border: 1px solid gray;
+	padding: 1em;
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+.dropdown-boxes-container-title{
+	margin: 0;
+	display: flex;
+	align-items: center;
+	font-size: 1em;
+}
+
+.dropdown-boxes{
+	border: 1px solid gray;
+}
+
+.dropdown-boxes-text{
+	margin: 1em;
+	font-size: 0.7em;
+}
+
+#dropdown-boxes-one{
+	display: none;
+}
+
+#dropdown-boxes-two{
+	display: none;
+}
+
+#dropdown-boxes-btn-two{
+	border: 1px solid gray;
+	padding: 1em;
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#dropdown-boxes-three{
+	display: none;
+}
+
+#dropdown-boxes-btn-three{
+	border: 1px solid gray;
+	padding: 1em;
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+form{
+	font-size: 0.8em;
+}
+
+#dropdown-arrow-down-one{
+	display: none;
+}
+
+#dropdown-arrow-down-two{
+	display: none;
+}
+
+#dropdown-arrow-down-three{
+	display: none;
 }
 
 
@@ -1433,8 +1526,7 @@ img {
 	}
 
 	.content-container{
-		grid-column: 2/3;
-		margin: 1em 6em 0 6em;
+		margin: 1em 8em 0 6em;
 	}
 	
 	#contact-info-section{
@@ -1484,7 +1576,7 @@ img {
 	}
 	
 	#subpage-dotts-right-contact{
-		width: 10em;
+		width: 6vw;
 		height: auto;
 		display: block;
 		margin-top: 10em;
@@ -1492,7 +1584,7 @@ img {
 	}
 	
 	#subpage-dotts-right-employees{
-		width: 15em;
+		width: 6vw;
 		height: auto;
 		display: block;
 		margin-top: 10em;
@@ -1509,7 +1601,7 @@ img {
 	}
 	
 	#contact-social-media-container{
-		width: 13em;
+		width: 8em;
 		display: flex;
 		flex-direction: row;
 	}
@@ -1551,10 +1643,57 @@ img {
 		padding: 1em 5.1em
 	}
 	
+	.about-us-employees-boxes-container-one{
+	display: flex;
+	justify-content: center;
+		align-items: center;
+	flex-wrap: wrap;
+	flex-direction: row;
+	margin: 0 5em 0;
+	}
+	
+	.about-us-employees-boxes-container-two{
+	display: flex;
+	justify-content: center;
+		align-items: center;
+	flex-wrap: wrap;
+	flex-direction: row;
+	margin: 0 5em 0;
+	}
+	
+	.right-margin{
+		margin-right: 5em;
+	}
+	
+	#additional-notes{
+		height: 5em;
+	}
+	
 	/*--------------------------------------------------
 	----------------Work Ability Clarification -----------------------*/
 	
 	.breadcrumb-second-layer{
 		margin-left: 1em;
 	}
+	
+	/*--------------------------------------------------
+	----------------Courses and Enrollment-----------------------*/
+	
+	form input{
+		width: 30em;
+	}
+	
+	form{
+		font-size: 1em;
+	}
+	
+	.dropdown-boxes-container-title{
+		font-size: 1.5em;
+	}
+	
+	.dropdown-boxes-text{
+		font-size: 1em;
+	}
 }
+	
+	
