@@ -1690,6 +1690,10 @@ form{
 	.dropdown-boxes-text{
 		font-size: 1em;
 	}
+	
+	#no-dot{
+		list-style: none;
+	}
 }
 	
 	

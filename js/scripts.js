@@ -44,22 +44,23 @@ $(() => {
         $subscribeModal.modal('show');
     });
 
+	/* Subjects page and Courses page dropdown elements */
 	$("#dropdown-boxes-btn-one").click(function(){
-		$("#dropdown-boxes-one").slideToggle("fast");
-		$("#dropdown-arrow-right-one").toggle();
-		$("#dropdown-arrow-down-one").toggle();
+		$("#dropdown-boxes-one").toggle(),
+		$("#dropdown-arrow-right-one").toggle(),
+		$("#dropdown-arrow-down-one").toggle()
 	});
 	
 	$("#dropdown-boxes-btn-two").click(function(){
-		$("#dropdown-boxes-two").slideToggle("fast"),
-		$("#dropdown-arrow-right-two").toggle();
-		$("#dropdown-arrow-down-two").toggle();
+		$("#dropdown-boxes-two").toggle(),
+		$("#dropdown-arrow-right-two").toggle(),
+		$("#dropdown-arrow-down-two").toggle()
 	});
 	
 	$("#dropdown-boxes-btn-three").click(function(){
-		$("#dropdown-boxes-three").slideToggle("fast");
-		$("#dropdown-arrow-right-three").toggle();
-		$("#dropdown-arrow-down-three").toggle();
+		$("#dropdown-boxes-three").toggle(),
+		$("#dropdown-arrow-right-three").toggle(),
+		$("#dropdown-arrow-down-three").toggle()
 	});
 });
 
