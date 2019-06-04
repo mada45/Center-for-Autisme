@@ -7,7 +7,7 @@
     font-style: normal;
 }
 
-.root{
+:root{
     --blue: #547dbd;
     --red: #e32626;
     --green: #66b230;
@@ -553,14 +553,9 @@ img {
 		margin-right: 0.2em;
 	}
 
-#subpage-dotts-right-contact{
+#subpage-dotts-right-contact, #subpage-dotts-right-employees{
 		display: none;
-	}
-	
-#subpage-dotts-right-employees{
-		display: none;
-	}
-
+}
 /*--------------------------------------------------------------
 ----------------------------------------------------------------
 ----------------------- About us page ---------------------------
@@ -698,8 +693,8 @@ img {
 .about-us-employees-boxes-container-one article p{
 	font-weight: 600;
 	position: absolute;
-	left: 0px;
-	bottom: 0px;
+	left: 0;
+	bottom: 0;
 	background: white;
 	margin: 0;
 	padding-right: 9em;
@@ -1098,7 +1093,7 @@ form{
     /*--------------------------------------------------------------
                         Don't display on desktop
     --------------------------------------------------------------*/
-    .off, #menuon, #x, .burger-lines{
+    .burger-lines{
         display: none;
     }
 
@@ -1109,6 +1104,17 @@ form{
         display: block;
     }
 
+    button{
+        transition: all .2s ease-in-out;
+    }
+
+    button:hover{
+        transform: scale(1.1);
+    }
+
+    button:focus{
+        outline: none;
+    }
     /*--------------------------------------------------------------
                                 Header
     --------------------------------------------------------------*/
@@ -1197,7 +1203,7 @@ form{
         text-align: center !important;
     }
 
-    /* open dropdown on hover */
+    /* Open dropdown on hover */
     .dropdown:hover > .dropdown-menu, .dropdown-submenu:hover > .dropdown-menu {
         display: block;
     }
@@ -1217,36 +1223,35 @@ form{
         text-decoration: none;
     }
 
-    .nav-link:hover{
+    .nav-link:hover, .nav-link:active, .nav-link:focus{
         text-decoration: underline;
         color: black;
+        background-color: white;
     }
 
-    .menu-btn-1st:hover{
+    .menu-btn-1st:hover,.menu-btn-1st:active {
         text-decoration-color: var(--blue);
     }
 
-    .menu-btn-2nd:hover{
+    .menu-btn-2nd:hover, .menu-btn-2nd:active{
         text-decoration-color: var(--red);
     }
 
-    .menu-btn-3rd:hover{
+    .menu-btn-3rd:hover, .menu-btn-3rd:active{
         text-decoration-color: var(--orange);
     }
 
-    .menu-btn-4th:hover{
+    .menu-btn-4th:hover, .menu-btn-4th:active{
         text-decoration-color: var(--green);
     }
 
-    .menu-btn-5th:hover{
+    .menu-btn-5th:hover, .menu-btn-5th:active{
         text-decoration-color: var(--yellow);
     }
 
-    .menu-btn-6th:hover{
+    .menu-btn-6th:hover, .menu-btn-6th:active{
         text-decoration-color: black;
     }
-
-
 
 
     /*--------------------------------------------------------------
@@ -1378,7 +1383,7 @@ form{
         grid-template-columns: 1fr repeat(3, 2fr) 1fr;
         grid-template-rows: repeat(2, 1fr);
         display: grid;
-        padding: 8em 3em 8em 3em;
+        padding: 7em 3em 7em 3em;
     }
 
 
@@ -1458,15 +1463,6 @@ form{
 
     #email-subscribe-input{
         width: 12vw;
-    }
-
-    #email-subscribe-btn{
-        transition: all .2s ease-in-out;
-    }
-
-    #email-subscribe-btn:hover{
-        opacity: 1;
-        transform: scale(1.1);
     }
 
     #footer-credentials-container{

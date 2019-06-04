@@ -3,14 +3,8 @@ $(() => {
     // ** Variables ** //
     const $navbar = $('.navbar');
     const $navbarToggler = $('.navbar-toggler');
-    const $dropdown = $('.dropdown');
-    const $dropdownToggle = $('.dropdown-toggle');
-    const $dropdownMenu = $('.dropdown-menu');
-    const $dropdownItem = $('.dropdown-item');
     const $navlink = $('.nav-link');
-    const $navItem = $('.nav-item');
     const $subscribeForm = $('#subscribe-form');
-    const $subscribeBtn = $('#email-subscribe-btn');
     const $subscribeModal = $('#subscribe-modal');
     /*--------------------------------------------------------------
                             Navigation
@@ -42,23 +36,6 @@ $(() => {
         $navbar.toggleClass('navbar-white');
     });
 	
-	$("#dropdown-boxes-btn-one").click(function(){
-		$("#dropdown-boxes-one").slideToggle("fast"),
-		$("#dropdown-arrow-right-one").toggle()
-		$("#dropdown-arrow-down-one").toggle()
-	});
-	
-	$("#dropdown-boxes-btn-two").click(function(){
-		$("#dropdown-boxes-two").slideToggle("fast"),
-		$("#dropdown-arrow-right-two").toggle()
-		$("#dropdown-arrow-down-two").toggle()
-	});
-	
-	$("#dropdown-boxes-btn-three").click(function(){
-		$("#dropdown-boxes-three").slideToggle("fast"),
-		$("#dropdown-arrow-right-three").toggle()
-		$("#dropdown-arrow-down-three").toggle()
-	});
 
     /* Subscribe form */
     $subscribeForm.submit(function(e){
@@ -67,6 +44,23 @@ $(() => {
         $subscribeModal.modal('show');
     });
 
+	$("#dropdown-boxes-btn-one").click(function(){
+		$("#dropdown-boxes-one").slideToggle("fast");
+		$("#dropdown-arrow-right-one").toggle();
+		$("#dropdown-arrow-down-one").toggle();
+	});
+	
+	$("#dropdown-boxes-btn-two").click(function(){
+		$("#dropdown-boxes-two").slideToggle("fast"),
+		$("#dropdown-arrow-right-two").toggle();
+		$("#dropdown-arrow-down-two").toggle();
+	});
+	
+	$("#dropdown-boxes-btn-three").click(function(){
+		$("#dropdown-boxes-three").slideToggle("fast");
+		$("#dropdown-arrow-right-three").toggle();
+		$("#dropdown-arrow-down-three").toggle();
+	});
 });
 
 /*--------------------------------------------------------------
@@ -122,7 +116,7 @@ function carousel() {
 
 
 /*--------------------------------------------------------------
-                        ?
+
 --------------------------------------------------------------*/
 
 function popup() {
