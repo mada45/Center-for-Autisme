@@ -1307,7 +1307,7 @@ form{
 	}
 
 	.content-container{
-		margin: 1em 9em 0 9em;
+		margin: 1em 8em 0 6em;
 	}
 	
 	#contact-info-section{
@@ -1357,7 +1357,7 @@ form{
 	}
 	
 	#subpage-dotts-right-contact{
-		width: 5em;
+		width: 6vw;
 		height: auto;
 		display: block;
 		margin-top: 10em;
@@ -1365,7 +1365,7 @@ form{
 	}
 	
 	#subpage-dotts-right-employees{
-		width: 5em;
+		width: 6vw;
 		height: auto;
 		display: block;
 		margin-top: 10em;
