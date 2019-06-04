@@ -9,12 +9,14 @@ $(() => {
     const $dropdownItem = $('.dropdown-item');
     const $navlink = $('.nav-link');
     const $navItem = $('.nav-item');
-
+    const $subscribeForm = $('#subscribe-form');
+    const $subscribeBtn = $('#email-subscribe-btn');
+    const $subscribeModal = $('#subscribe-modal');
     /*--------------------------------------------------------------
                             Navigation
     --------------------------------------------------------------*/
     /* Show dropdown-submenu */
-    $('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
+    $('.dropdown-menu a.dropdown-toggle').on('click', function (e) {
         if (!$(this).next().hasClass('show')) {
             $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
         }
@@ -22,7 +24,7 @@ $(() => {
         $subMenu.toggleClass('show');
 
 
-        $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+        $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function (e) {
             $('.dropdown-submenu .show').removeClass("show");
         });
 
@@ -30,18 +32,24 @@ $(() => {
     });
 
     /* Nav link active */
-    $navlink.click(function(){
+    $navlink.click(function () {
         $navlink.removeClass('active');
         $(this).addClass('active');
     });
 
     /* Navbar white background on mobile */
-    $navbarToggler.click(function(){
+    $navbarToggler.click(function () {
         $navbar.toggleClass('navbar-white');
     });
 
-});
+    /* Subscribe form */
+    $subscribeForm.submit(function(e){
+        e.preventDefault();
+        $subscribeForm[0].reset();
+        $subscribeModal.modal('show');
+    });
 
+});
 
 /*--------------------------------------------------------------
                         Homepage slideshow
@@ -93,6 +101,7 @@ function carousel() {
     dots[myIndex-1].className += " white";
     setTimeout(carousel, 4000); // Change image every 3 seconds
 }
+
 
 /*--------------------------------------------------------------
                         ?

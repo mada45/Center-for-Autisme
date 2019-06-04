@@ -7,6 +7,15 @@
     font-style: normal;
 }
 
+.root{
+    --blue: #547dbd;
+    --red: #e32626;
+    --green: #66b230;
+    --orange: #f5994a;
+    --yellow: #eae237;
+    --grey: #cfd1d2;
+}
+
 /*--------------------------------------------------------------
 ----------------------------------------------------------------
 ----------------------- Landing page ---------------------------
@@ -57,8 +66,8 @@ img {
 }
 
 .icons{
-    width: 7vw;
-    height: 100%;
+    width: 8vw;
+    height: auto;
 }
 
 /*--------------------------------------------------------------
@@ -85,6 +94,17 @@ img {
 
 #logo-img{
     width: 28vw;
+}
+
+#search-btn{
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+#search-btn img{
+    width: 6vw;
+    margin: 0;
 }
 
 .nav-bar-section {
@@ -132,11 +152,6 @@ img {
     left: 100%;
     margin-left: .1rem;
     margin-right: .1rem;
-}*/
-
-/* Make nav arrow dissapear */
-/*.dropdown-toggle::after {
-    display:none !important;
 }*/
 
 .icon-bar {
@@ -286,7 +301,7 @@ img {
 }
 
 .badge, .tag {
-    color: #fff;
+    color: white;
     display: inline-block !important;
     padding-left: 8px;
     padding-right: 8px;
@@ -305,7 +320,7 @@ img {
 }
 
 .white, .hover-white:hover {
-    background-color: #fff !important;
+    background-color: white !important;
 }
 
 .left, .right, .badge {
@@ -321,7 +336,7 @@ img {
 }
 
 .read-more-btn{
-    background-color: rgba(206, 32, 32, 10);
+    background-color: var(--red);
     padding: 0.5em 1em 0.5em 1em;
     font-size: 1em;
     border: 2px solid transparent;
@@ -417,14 +432,20 @@ img {
 
 #email-subscribe-input{
     border: 1px solid grey;
+    width: 30vw;
+    height: auto;
 }
 
 #email-subscribe-btn{
-    background-color: rgba(227, 38, 38, 1);
+    background-color: var(--red);
     color: white;
-    padding: 0.2em 0.5em;
+    padding: 0.1em 0.5em;
     margin: 0 0 0 0.5em;
     border: none;
+}
+
+#email-subscribe-btn:focus{
+    outline: none;
 }
 
 #footer-contact-container{
@@ -437,8 +458,6 @@ img {
     grid-row: 2/3;
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
-    align-self: flex-start;
     margin: 1em 0 0 0;
 }
 
@@ -671,8 +690,8 @@ img {
 .about-us-employees-boxes-container article p{
 	font-weight: 600;
 	position: absolute;
-	left: 0px;
-	bottom: 0px;
+	left: 0;
+	bottom: 0;
 	background: white;
 	margin: 0;
 	padding-right: 9em;
@@ -683,10 +702,10 @@ img {
 #dark-bg-popup-close{
 	z-index: 2;
 	position: absolute;
-	top: 0px;
-	right: 0px;
-	bottom: 0px;
-	left: 0px;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 	background: black;
 	opacity: 0.5;
 	display: none;
@@ -707,6 +726,18 @@ img {
                      Mobile landscape mode
 --------------------------------------------------------------*/
 @media all and (max-width: 768px) and (orientation:landscape){
+    #logo-img {
+        width: 20vw;
+    }
+
+    .search-bar-div{
+        height: 5vw;
+    }
+
+    .icons{
+        width: 5vw;
+    }
+
     .slideshow-item {
         height: 300px;
     }
@@ -715,12 +746,16 @@ img {
         margin: 2em;
     }
 
-    footer h4 {
-        font-size: 1.5em;
+    .footer-container h3 {
+        font-size: 5vw;
+    }
+
+    .footer-container p{
+        font-size: 3vw;
     }
 
     #footer-left-logo-section img, #footer-right-logo-section img {
-        width: 6em;
+        width: 4em;
     }
 }
 
@@ -728,6 +763,32 @@ img {
                             Tablet
 --------------------------------------------------------------*/
 @media all and (min-width: 768px) and (max-device-width: 1024px){
+    .header-container{
+        margin: 1.5em 1.5em 0 1.5em;
+    }
+
+    #logo-img {
+        width: 20vw;
+    }
+
+    .icon-bar{
+        width: 35px;
+        height: 2px;
+        margin-top: 7px;
+    }
+
+    .search-bar-div{
+        height: 5vw;
+    }
+
+    .icons{
+        width: 5vw;
+    }
+
+    #search-field{
+        width: 25vw;
+    }
+
     h1{
         font-size: 5em;
     }
@@ -736,6 +797,7 @@ img {
         font-size: 1.5em;
     }
 
+    /***  Slideshow section ***/
     .slideshow-txt h1{
         padding: 0 0 0.5em 0;
     }
@@ -748,6 +810,7 @@ img {
         font-size: 1.3em;
     }
 
+    /***  User section ***/
     .user-choice{
         margin: 3em;
     }
@@ -756,16 +819,31 @@ img {
         font-size: 1.5em;
     }
 
-    footer h4{
-        font-size: 1.5em;
+    /***  Footer  ***/
+    .footer-container h3 {
+        font-size: 5vw;
     }
 
-    #footer-left-logo-section img, #footer-right-logo-section img {
-        width: 8em;
+    .footer-container p{
+        font-size: 3vw;
+    }
+
+    .footer-logo img {
+        width: 8vw;
     }
 
     #social-media-icons-container img{
-        width: 3.5em;
+        width: 6vw;
+    }
+
+    #email-subscribe-input{
+        width: 25vw;
+        height: 4vw;
+        font-size: 2vw;
+    }
+
+    #email-subscribe-btn{
+        font-size: 2vw;
     }
 }
 
@@ -773,8 +851,22 @@ img {
                      Tablet landscape mode
 --------------------------------------------------------------*/
 @media all and (min-width: 768px) and (max-device-width: 1024px) and (orientation: landscape){
+    #logo-img{
+        width: 12vw;
+    }
+
+    .navbar{
+        padding: 1em 0 1em 0;
+    }
+
+    .navbar-nav{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
     .nav-link{
-        font-size: 1.3em;
+        font-size: 1.8vw;
     }
 
     .search-and-language-section{
@@ -783,9 +875,20 @@ img {
         justify-content: flex-end;
     }
 
+    .icons{
+        width: 3vw;
+    }
+
+    .search-bar-div{
+        height: 3vw;
+        width: 20vw;
+        margin: 0 1em 0 0;
+    }
+
     .language-btn-div{
         display: flex;
-        width: 5em;
+        width: 8vw;
+        height: 3vw;
         justify-content: space-evenly;
     }
 
@@ -800,10 +903,20 @@ img {
         position: relative;
     }
 
+    /***  Slideshow section ***/
     .slideshow-section{
         margin: 0;
     }
 
+    .slideshow-txt h1{
+        font-size: 5vw;
+    }
+
+    .read-more-btn {
+        font-size: 1.5vw;
+    }
+
+    /***  User section ***/
     .user-section ul{
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 1fr;
@@ -813,8 +926,75 @@ img {
         margin: 1em;
     }
 
+    .user-choice h4{
+        font-size: 2vw;
+    }
+
     .user-choice-title{
         padding: 6px;
+    }
+
+    /***  Footer  ***/
+    .footer-container{
+        grid-template-columns: repeat(4, 1fr);;
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .footer-container h3 {
+        font-size: 3vw;
+    }
+
+    .footer-container p{
+        font-size: 1.5vw;
+        margin: 0;
+    }
+
+    .footer-section{
+        padding: 1em;
+    }
+
+    #footer-left-logo-section{
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+
+    #footer-right-logo-section{
+        grid-row: 1/2;
+        grid-column: 4/5;
+    }
+
+    #footer-address-container{
+        grid-row: 1/2;
+        grid-column: 2/3;
+    }
+
+    #footer-social-media-container{
+        grid-row: 1/2;
+        grid-column: 3/4;
+        margin: 0;
+    }
+
+    #footer-subscribe-container{
+        grid-row: 2/3;
+        grid-column: 2/4;
+    }
+
+    .footer-logo img {
+        width: 5vw;
+    }
+
+    #email-subscribe-input{
+        width: 15vw;
+        height: 3vw;
+        font-size: 1.5vw;
+    }
+
+    #email-subscribe-btn {
+        font-size: 1.5vw;
+    }
+
+    #social-media-icons-container img{
+        width: 4.5vw;
     }
 }
 
@@ -855,16 +1035,27 @@ img {
         justify-content: flex-end;
     }
 
+    #search-btn{
+        background-color: transparent;
+        margin: 0;
+        padding: 0 0.5em 0 0.5em;
+    }
+
+    #search-btn img{
+        width: 1.6vw;
+    }
+
+    #search-btn:hover{
+        background-color: rgba(207, 209, 210, 0.60);
+        cursor: pointer;
+    }
+
     .icons{
-        width: 2em;
+        width: 2vw;
     }
 
     .search-bar-div{
         height: 2em;
-    }
-
-    .search-bar-div img{
-        margin-right: 0.5em;
     }
 
     #search-field{
@@ -876,6 +1067,7 @@ img {
     .language-btn-div{
         margin: 0 0 0 1.5em;
         width: 4.5vw;
+        height: 2vw;
         display: flex;
         justify-content: space-between;
     }
@@ -886,7 +1078,7 @@ img {
         width: 100%;
         justify-self: center;
         padding: 0;
-        margin: 3em 0 0 0;
+        margin: 2em 0 0 0;
     }
 
     .navbar{
@@ -895,33 +1087,17 @@ img {
         padding: 0;
     }
 
+    /* Make nav arrow dissapear */
+    .dropdown-toggle::after {
+        display:none !important;
+    }
+
     .nav-item{
         display: inline;
     }
 
     a {
         display: inline-block;
-    }
-
-    .nav-link:hover ~ hr {
-        margin-left: 25%;
-    }
-
-    .nav-link:hover ~ hr {
-        margin-left: 50%;
-    }
-
-    .nav-link:hover ~ hr {
-        margin-left: 75%;
-    }
-
-    hr {
-        height: .25rem;
-        width: 25%;
-        margin: 0;
-        background: tomato;
-        border: none;
-        transition: .3s ease-in-out;
     }
 
     .dropdown-menu{
@@ -933,13 +1109,6 @@ img {
         display: block;
     }
 
-    .dropdown-item.active, .dropdown-item:active {
-        color: black;
-        text-decoration: underline;
-        text-decoration-color: inherit;
-        background-color: white;
-    }
-
     .navbar-nav{
         width: 100%;
         justify-content: space-between;
@@ -947,14 +1116,46 @@ img {
 
     .navbar a{
         display: inline-block;
-        font-size: 1.2em;
+        font-size: 1.2vw;
         min-width: auto;
-        padding: 0 !important;
+        padding: 0 1em 0.5em 1em !important;
+        position: relative;
+        letter-spacing: 1px;
+        text-decoration: none;
     }
 
-    .nav-link{
-        padding: 0.5em 1em 0.5em 1em !important;
+    .nav-link:hover{
+        text-decoration: underline;
+        color: black;
     }
+
+    .menu-btn-1st:hover{
+        text-decoration-color: var(--blue);
+    }
+
+    .menu-btn-2nd:hover{
+        text-decoration-color: var(--red);
+    }
+
+    .menu-btn-3rd:hover{
+        text-decoration-color: var(--orange);
+    }
+
+    .menu-btn-4th:hover{
+        text-decoration-color: var(--green);
+    }
+
+    .menu-btn-5th:hover{
+        text-decoration-color: var(--yellow);
+    }
+
+    .menu-btn-6th:hover{
+        text-decoration-color: black;
+    }
+
+
+
+
     /*--------------------------------------------------------------
                             Slideshow section
     --------------------------------------------------------------*/
@@ -1008,7 +1209,7 @@ img {
 
     .read-more-btn {
         font-size: 1.2em;
-        padding: 0.5em 0 0.5em 1.5em;
+        padding: 0.3em 0 0.3em 1.5em;
     }
 
     .read-more-btn:after, .user-choice-title h4:after{
@@ -1025,7 +1226,7 @@ img {
     }
 
     .read-more-btn:hover{
-        background-color: rgba(206, 32, 32, 10);
+        background-color: rgba(207, 38, 38, 10);
         padding-right: 30px;
     }
 
@@ -1048,7 +1249,7 @@ img {
     }
 
     .user-choice a:hover .user-choice-title{
-        background-color: rgba(206, 32, 32, 0.8);
+        background-color: rgba(207, 38, 38, 0.8);
     }
 
     .user-choice a{
@@ -1128,6 +1329,11 @@ img {
     #social-media-icons-container img {
         width: 2.5vw;
         padding: 5px;
+        transition: all .2s ease-in-out;
+    }
+
+    #social-media-icons-container img:hover {
+        transform: scale(1.2);
     }
 
     #footer-address-container{
@@ -1155,6 +1361,19 @@ img {
     #subscribe-form{
         font-size: 1.1vw;
         margin: 1em 0 0 0;
+    }
+
+    #email-subscribe-input{
+        width: 12vw;
+    }
+
+    #email-subscribe-btn{
+        transition: all .2s ease-in-out;
+    }
+
+    #email-subscribe-btn:hover{
+        opacity: 1;
+        transform: scale(1.1);
     }
 
     #footer-credentials-container{
