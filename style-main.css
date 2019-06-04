@@ -553,7 +553,15 @@ footer h4{
 	margin-right: 0.5em;
 }
 
-.about-us-employees-boxes-container{
+.about-us-employees-boxes-container-one{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+	flex-direction: column;
+}
+
+.about-us-employees-boxes-container-two{
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -633,7 +641,19 @@ footer h4{
 	border-bottom: grey solid 1px;
 }
 
-.about-us-employees-boxes-container article p{
+.about-us-employees-boxes-container-one article p{
+	font-weight: 600;
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	background: white;
+	margin: 0;
+	padding-right: 9em;
+	padding-left: 0.2em;
+	border-left: 10px grey solid;
+}
+
+.about-us-employees-boxes-container-two article p{
 	font-weight: 600;
 	position: absolute;
 	left: 0px;
@@ -659,6 +679,79 @@ footer h4{
 
 .bold-font{
 	font-weight: 600;
+}
+
+#dropdown-boxes-btn-one{
+	border: 1px solid gray;
+	padding: 1em;
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+.dropdown-boxes-container-title{
+	margin: 0;
+	display: flex;
+	align-items: center;
+	font-size: 1em;
+}
+
+.dropdown-boxes{
+	border: 1px solid gray;
+}
+
+.dropdown-boxes-text{
+	margin: 1em;
+	font-size: 0.7em;
+}
+
+#dropdown-boxes-one{
+	display: none;
+}
+
+#dropdown-boxes-two{
+	display: none;
+}
+
+#dropdown-boxes-btn-two{
+	border: 1px solid gray;
+	padding: 1em;
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#dropdown-boxes-three{
+	display: none;
+}
+
+#dropdown-boxes-btn-three{
+	border: 1px solid gray;
+	padding: 1em;
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+form{
+	font-size: 0.8em;
+}
+
+#dropdown-arrow-down-one{
+	display: none;
+}
+
+#dropdown-arrow-down-two{
+	display: none;
+}
+
+#dropdown-arrow-down-three{
+	display: none;
 }
 
 
@@ -1114,16 +1207,7 @@ footer h4{
 	}
 
 	.content-container{
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-		grid-column: 2/3;
-		margin: 2em 0 0 0;
-=======
-		margin: 2em 0 0 0;
->>>>>>> origin/master
 		margin: 1em 6em 0 6em;
->>>>>>> 0bbbc4ccf5cd9b0bcb49e7e4bce39ac29012c6c9
 	}
 	
 	#contact-info-section{
@@ -1233,11 +1317,37 @@ footer h4{
 	}
 	
 	#research-box{
-		padding: 0.5em 4.1em;
+		padding: 0.5em 4.5em;
 	}
 	
 	#studies-box{
-		padding: 1em 5.1em
+		padding: 1em 4.6em
+	}
+	
+	.about-us-employees-boxes-container-one{
+	display: flex;
+	justify-content: center;
+		align-items: center;
+	flex-wrap: wrap;
+	flex-direction: row;
+	margin: 0 5em 0;
+	}
+	
+	.about-us-employees-boxes-container-two{
+	display: flex;
+	justify-content: center;
+		align-items: center;
+	flex-wrap: wrap;
+	flex-direction: row;
+	margin: 0 5em 0;
+	}
+	
+	.right-margin{
+		margin-right: 5em;
+	}
+	
+	#additional-notes{
+		height: 5em;
 	}
 	
 	/*--------------------------------------------------
@@ -1246,4 +1356,25 @@ footer h4{
 	.breadcrumb-second-layer{
 		margin-left: 1em;
 	}
+	
+	/*--------------------------------------------------
+	----------------Courses and Enrollment-----------------------*/
+	
+	form input{
+		width: 30em;
+	}
+	
+	form{
+		font-size: 1em;
+	}
+	
+	.dropdown-boxes-container-title{
+		font-size: 1.5em;
+	}
+	
+	.dropdown-boxes-text{
+		font-size: 1em;
+	}
 }
+	
+	
