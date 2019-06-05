@@ -1420,7 +1420,7 @@ form{
         grid-template-columns: 1fr repeat(3, 2fr) 1fr;
         grid-template-rows: repeat(2, 1fr);
         display: grid;
-        padding: 7em 3em 7em 3em;
+        padding: 1em 3em 5em 3em;
     }
 
 
@@ -1742,6 +1742,10 @@ form{
 	
 	.dropdown-boxes-text{
 		font-size: 1em;
+	}
+	
+	#no-dot{
+		list-style: none;
 	}
 }
 	
