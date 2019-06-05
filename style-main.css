@@ -1599,6 +1599,13 @@ form{
 		margin-top: 10em;
 		margin-right: 2em;
 	}
+	#subpage-dotts-right-asf{
+		width: 8vw;
+		height: auto;
+		display: block;
+		margin-top: 10em;
+		margin-right: 2em;
+	}
 	
 	.subpage-dotts-right-individual{
 		margin-top: 15em;
@@ -1717,6 +1724,7 @@ form{
 	#no-dot{
 		list-style: none;
 	}
+	
 }
 	
 	
