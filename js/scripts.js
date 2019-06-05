@@ -17,8 +17,7 @@ $(() => {
         var $subMenu = $(this).next(".dropdown-menu");
         $subMenu.toggleClass('show');
 
-
-        $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function (e) {
+        $(this).parents('.nav-item.dropdown.show').on('hidden.bs.dropdown', function (e) {
             $('.dropdown-submenu .show').removeClass("show");
         });
 
@@ -31,9 +30,9 @@ $(() => {
         $(this).addClass('active');
     });
 
-    /* Navbar white background on mobile */
+    /* Change navbar style when toggled on mobile */
     $navbarToggler.click(function () {
-        $navbar.toggleClass('navbar-white');
+        $navbar.toggleClass('navbar-toggled');
     });
 	
 
